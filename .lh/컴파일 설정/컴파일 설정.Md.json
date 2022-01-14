@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 29,
+            "activePatchIndex": 32,
             "patches": [
                 {
                     "date": 1642178420542,
@@ -124,6 +124,18 @@
                 {
                     "date": 1642179183706,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,4 +73,6 @@\n     \"noFallthroughCasesInSwitch\": true //switch문 이상하면 에러내기\n   }\n }\n ```\n+\n+전체 링크 :  [https://www.typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig)\n"
+                },
+                {
+                    "date": 1642180144071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,7 @@\n   }\n }\n ```\n \n-전체 링크 :  [https://www.typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig)\n+전체 링크 :  [https://www.typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig)<br><br>\n+\n+> ## .ts -> .js 변환\n"
+                },
+                {
+                    "date": 1642180162669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,4 +77,6 @@\n \n 전체 링크 :  [https://www.typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig)<br><br>\n \n > ## .ts -> .js 변환\n+\n+- 터미널에서 `tsc -w`\n"
+                },
+                {
+                    "date": 1642180183384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,5 +78,5 @@\n 전체 링크 :  [https://www.typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig)<br><br>\n \n > ## .ts -> .js 변환\n \n-- 터미널에서 `tsc -w`\n+- 터미널에서 `tsc -w` 입력하면 자동으로 변환\n"
                 }
             ],
             "date": 1642178420542,
