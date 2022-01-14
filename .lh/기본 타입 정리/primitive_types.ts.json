@@ -3,11 +3,63 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1642180304355,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642181854066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n- \n\\ No newline at end of file\n+let userName: string = \"kim\";\n"
+                },
+                {
+                    "date": 1642182509247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n+// 변수에 타입지정\n+// userName이라는 변수에는 string type만 들어올 수 있음\n let userName: string = \"kim\";\n+let age: number = 50;\n"
+                },
+                {
+                    "date": 1642182539032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n // 변수에 타입지정\n // userName이라는 변수에는 string type만 들어올 수 있음\n let userName: string = \"kim\";\n let age: number = 50;\n+let merry: undefined = undefined;\n"
+                },
+                {
+                    "date": 1642182582079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 변수에 타입지정\n // userName이라는 변수에는 string type만 들어올 수 있음\n let userName: string = \"kim\";\n let age: number = 50;\n-let merry: undefined = undefined;\n+let state: undefined = undefined;\n"
+                },
+                {
+                    "date": 1642182588357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n // 변수에 타입지정\n-// userName이라는 변수에는 string type만 들어올 수 있음\n let userName: string = \"kim\";\n let age: number = 50;\n let state: undefined = undefined;\n"
+                },
+                {
+                    "date": 1642182647693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n // 변수에 타입지정\n let userName: string = \"kim\";\n let age: number = 50;\n let state: undefined = undefined;\n+let members: array = [\"kim\", \"park\"];\n"
+                },
+                {
+                    "date": 1642182653779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 변수에 타입지정\n let userName: string = \"kim\";\n let age: number = 50;\n let state: undefined = undefined;\n-let members: array = [\"kim\", \"park\"];\n+let members: [] = [\"kim\", \"park\"];\n"
+                },
+                {
+                    "date": 1642182660961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 변수에 타입지정\n let userName: string = \"kim\";\n let age: number = 50;\n let state: undefined = undefined;\n-let members: [] = [\"kim\", \"park\"];\n+let members: string[] = [\"kim\", \"park\"];\n"
+                },
+                {
+                    "date": 1642182746884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n // 변수에 타입지정\n let userName: string = \"kim\";\n let age: number = 50;\n let state: undefined = undefined;\n-let members: string[] = [\"kim\", \"park\"];\n+\n+// 배열, 객체에 타입 지정\n+let memberList: string[] = [\"kim\", \"park\"];\n+let memberObject: { name: string; age: number } = { name: \"kim\", age: 19 };\n"
+                },
+                {
+                    "date": 1642182886535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n \n // 배열, 객체에 타입 지정\n let memberList: string[] = [\"kim\", \"park\"];\n let memberObject: { name: string; age: number } = { name: \"kim\", age: 19 };\n+\n+// 타입스크립트는 대부분 타입지정을 자동으로 한다.\n"
+                },
+                {
+                    "date": 1642182927628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,5 @@\n let memberList: string[] = [\"kim\", \"park\"];\n let memberObject: { name: string; age: number } = { name: \"kim\", age: 19 };\n \n // 타입스크립트는 대부분 타입지정을 자동으로 한다.\n+let userName2 = \"kim\";\n"
+                },
+                {
+                    "date": 1642182945853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,6 @@\n let memberObject: { name: string; age: number } = { name: \"kim\", age: 19 };\n \n // 타입스크립트는 대부분 타입지정을 자동으로 한다.\n let userName2 = \"kim\";\n+let age2 = 50;\n+let state = undefined;\n"
+                },
+                {
+                    "date": 1642182954960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,4 @@\n \n // 타입스크립트는 대부분 타입지정을 자동으로 한다.\n let userName2 = \"kim\";\n let age2 = 50;\n-let state = undefined;\n"
                 }
             ],
             "date": 1642180304355,
