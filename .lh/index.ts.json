@@ -1,0 +1,42 @@
+{
+    "sourceFile": "index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1641823394276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1641823449057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n   1 + 1;\n }\n \n function func(x: number | string): number {\n-  return x * 2;\n+  if (x) return x * 2;\n }\n \n const inName = (n?: string): void => {\n   if (n === undefined) {\n"
+                },
+                {
+                    "date": 1641823509400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,13 @@\n   1 + 1;\n }\n \n function func(x: number | string): number {\n-  if (x) return x * 2;\n+  if (typeof x === \"string\") {\n+    return;\n+  } else {\n+    return x * 2;\n+  }\n }\n \n const inName = (n?: string): void => {\n   if (n === undefined) {\n"
+                },
+                {
+                    "date": 1642097757271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n function func1(x?: number): void {\n   1 + 1;\n }\n \n-function func(x: number | string): number {\n+function func2(x: number | string): number {\n   if (typeof x === \"string\") {\n     return;\n   } else {\n     return x * 2;\n"
+                },
+                {
+                    "date": 1642097763991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n function func1(x?: number): void {\n   1 + 1;\n }\n \n-function func2(x: number | string): number {\n+function func3(x: number | string): number {\n   if (typeof x === \"string\") {\n     return;\n   } else {\n     return x * 2;\n"
+                },
+                {
+                    "date": 1642178041619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,14 +65,7 @@\n const func2 = (x: number): number => {\n   return x * 2;\n };\n \n-class User {\n-  name: string;\n-  constructor(name: string) {\n-    this.name = name;\n-  }\n-}\n-\n func(2);\n \n console.log(nameObject);\n"
+                },
+                {
+                    "date": 1642178049253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,71 +0,0 @@\n-type MyType = string | number;\n-type Member = [number, boolean];\n-type Member2 = {\n-  [key: string]: string;\n-};\n-\n-let nameArray: string[] = [\"kim\", \"nim\", \"lim\"];\n-let nameObject: { name: string } = { name: \"kim\" };\n-let nameUnion: MyType = 1;\n-\n-let myName: string = \"wooseok\";\n-let myAge: string = \"27\";\n-let myHometown: string = \"Seoul\";\n-\n-let myFavoriteSong: { song: string; singer: string } = {\n-  song: \"OHAIYO MY NIGHT\",\n-  singer: \"D-HACK\",\n-};\n-\n-let project: {\n-  member: string[];\n-  days: number;\n-  started: boolean;\n-} = {\n-  member: [\"kim\", \"park\"],\n-  days: 30,\n-  started: true,\n-};\n-\n-let member3: (number | string)[] = [1, 2, \"3\"];\n-let object: { a: number | string } = { a: 1 };\n-\n-let john: Member = [123, false];\n-let john2: Member2 = {\n-  name: \"john\",\n-  age: \"12\",\n-};\n-\n-function func(x: number): number {\n-  return x * 2;\n-}\n-\n-function func1(x?: number): void {\n-  1 + 1;\n-}\n-\n-function func3(x: number | string): number {\n-  if (typeof x === \"string\") {\n-    return;\n-  } else {\n-    return x * 2;\n-  }\n-}\n-\n-const inName = (n?: string): void => {\n-  if (n === undefined) {\n-    console.log(\"이름이 없습니다\");\n-    return;\n-  }\n-  console.log(\"안녕하세요 홍길동\");\n-};\n-\n-inName(\"한우석\");\n-\n-const func2 = (x: number): number => {\n-  return x * 2;\n-};\n-\n-func(2);\n-\n-console.log(nameObject);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1641823394276,
+            "name": "Commit-0",
+            "content": "type MyType = string | number;\ntype Member = [number, boolean];\ntype Member2 = {\n  [key: string]: string;\n};\n\nlet nameArray: string[] = [\"kim\", \"nim\", \"lim\"];\nlet nameObject: { name: string } = { name: \"kim\" };\nlet nameUnion: MyType = 1;\n\nlet myName: string = \"wooseok\";\nlet myAge: string = \"27\";\nlet myHometown: string = \"Seoul\";\n\nlet myFavoriteSong: { song: string; singer: string } = {\n  song: \"OHAIYO MY NIGHT\",\n  singer: \"D-HACK\",\n};\n\nlet project: {\n  member: string[];\n  days: number;\n  started: boolean;\n} = {\n  member: [\"kim\", \"park\"],\n  days: 30,\n  started: true,\n};\n\nlet member3: (number | string)[] = [1, 2, \"3\"];\nlet object: { a: number | string } = { a: 1 };\n\nlet john: Member = [123, false];\nlet john2: Member2 = {\n  name: \"john\",\n  age: \"12\",\n};\n\nfunction func(x: number): number {\n  return x * 2;\n}\n\nfunction func1(x?: number): void {\n  1 + 1;\n}\n\nfunction func(x: number | string): number {\n  return x * 2;\n}\n\nconst inName = (n?: string): void => {\n  if (n === undefined) {\n    console.log(\"이름이 없습니다\");\n    return;\n  }\n  console.log(\"안녕하세요 홍길동\");\n};\n\ninName(\"한우석\");\n\nconst func2 = (x: number): number => {\n  return x * 2;\n};\n\nclass User {\n  name: string;\n  constructor(name: string) {\n    this.name = name;\n  }\n}\n\nfunc(2);\n\nconsole.log(nameObject);\n"
+        }
+    ]
+}

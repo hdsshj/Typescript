@@ -1,0 +1,18 @@
+{
+    "sourceFile": "index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1641823352012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1641823352012,
+            "name": "Commit-0",
+            "content": "var nameArray = [\"kim\", \"nim\", \"lim\"];\nvar nameObject = { name: \"kim\" };\nvar nameUnion = 1;\nvar myName = \"wooseok\";\nvar myAge = \"27\";\nvar myHometown = \"Seoul\";\nvar myFavoriteSong = {\n  song: \"OHAIYO MY NIGHT\",\n  singer: \"D-HACK\",\n};\nvar project = {\n  member: [\"kim\", \"park\"],\n  days: 30,\n  started: true,\n};\nvar member3 = [1, 2, \"3\"];\nvar object = { a: 1 };\nvar john = [123, false];\nvar john2 = {\n  name: \"john\",\n  age: \"12\",\n};\nfunction func(x) {\n  return x * 2;\n}\nfunction func1(x) {\n  1 + 1;\n}\nvar inName = function (n) {\n  if (n === undefined) {\n    console.log(\"이름이 없습니다\");\n    return;\n  }\n  console.log(\"안녕하세요 홍길동\");\n};\ninName();\nvar func2 = function (x) {\n  return x * 2;\n};\n\nvar User = /** @class */ (function () {\n  function User(name) {\n    this.name = name;\n  }\n  return User;\n})();\nfunc(2);\nconsole.log(nameObject);\n"
+        }
+    ]
+}
