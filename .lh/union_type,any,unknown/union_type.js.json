@@ -1,0 +1,18 @@
+{
+    "sourceFile": "union_type,any,unknown/union_type.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642184129926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642184129926,
+            "name": "Commit-0",
+            "content": "// 타입을 2개 이상 합친 새로운 타입 (Union Type)\n// number type, string type이 아닌 'number | string' 이라는 새로운 타입\nvar member = 1;\nvar members = [1, \"2\", 3];\nvar object = { a: 1 };\n// 간단한 연산도 타입이 맞아야 한다.\nvar var1 = \"kim\";\nvar var2 = 1;\nvar1 + 1;\nvar2 + 1;\nconsole.log(var1 + 1, var2 + 1);\n// 타입실드 해제 문법\n// 일반 js 변수처럼 사용\nvar nameAny;\nnameAny = 123;\n// any와 유사하지만 타입실드를 해제하지 않음\nvar nameUnknown;\nnameUnknown = 123;\n// nameAny는 에러 검출 안됨\n// nameUnknown은 에러 검출 됨\nvar newVar = nameAny;\n"
+        }
+    ]
+}

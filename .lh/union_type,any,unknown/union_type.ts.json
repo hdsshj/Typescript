@@ -1,0 +1,146 @@
+{
+    "sourceFile": "union_type,any,unknown/union_type.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 32,
+            "patches": [
+                {
+                    "date": 1642183187827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642183241654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-let member: number | string = \"kim\";\n+// 타입을 2개 이상 합친 새로운 타입 (Union Type)\n+let member: number | string = 1;\n"
+                },
+                {
+                    "date": 1642183319623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n+// number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n+let members: number[];\n"
+                },
+                {
+                    "date": 1642183326981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n-let members: number[];\n+let members: number[] = [1, \"2\", 3];\n"
+                },
+                {
+                    "date": 1642183349833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: number[] = [1, \"2\", 3];\n+let object: { a: string } = { a: \"123\" };\n"
+                },
+                {
+                    "date": 1642183375658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n-let members: number[] = [1, \"2\", 3];\n+let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string } = { a: \"123\" };\n"
+                },
+                {
+                    "date": 1642183384368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n-let object: { a: string } = { a: \"123\" };\n+let object: { a: string | string } = { a: \"123\" };\n"
+                },
+                {
+                    "date": 1642183392516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n-let object: { a: string | string } = { a: \"123\" };\n+let object: { a: string | string } = { a: 1 };\n"
+                },
+                {
+                    "date": 1642183398528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n-let object: { a: string | string } = { a: 1 };\n+let object: { a: string | number } = { a: 1 };\n"
+                },
+                {
+                    "date": 1642183451414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,4 +2,6 @@\n // number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n+\n+let userName: any = \"aa\";\n"
+                },
+                {
+                    "date": 1642183487914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n-let userName: any = \"aa\";\n+let name: any = \"aa\";\n"
+                },
+                {
+                    "date": 1642183537879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n-let name: any = \"aa\";\n+// 타입실드 해제 문법\n+let nameAny: any = \"aa\";\n"
+                },
+                {
+                    "date": 1642183566372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n // 타입실드 해제 문법\n+// 일반 js 변수처럼 사용\n let nameAny: any = \"aa\";\n"
+                },
+                {
+                    "date": 1642183663625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,6 @@\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any = \"aa\";\n+\n+let nameUnknown: unknown = \"aa\";\n"
+                },
+                {
+                    "date": 1642183705875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any = \"aa\";\n \n-let nameUnknown: unknown = \"aa\";\n+let nameUnknown: unknown;\n"
+                },
+                {
+                    "date": 1642183726946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,6 @@\n // 일반 js 변수처럼 사용\n let nameAny: any = \"aa\";\n \n let nameUnknown: unknown;\n+\n+let newVar: string = nameAny;\n"
+                },
+                {
+                    "date": 1642183732377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,5 @@\n let nameAny: any = \"aa\";\n \n let nameUnknown: unknown;\n \n-let newVar: string = nameAny;\n+let newVar: string = nameUnknown;\n"
+                },
+                {
+                    "date": 1642183813452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n let object: { a: string | number } = { a: 1 };\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n-let nameAny: any = \"aa\";\n+let nameAny: any;\n+let nameAny = 123;\n \n let nameUnknown: unknown;\n \n let newVar: string = nameUnknown;\n"
+                },
+                {
+                    "date": 1642183819577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n-let nameAny = 123;\n+nameAny = 123;\n \n let nameUnknown: unknown;\n \n let newVar: string = nameUnknown;\n"
+                },
+                {
+                    "date": 1642183826785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n let nameAny: any;\n nameAny = 123;\n \n let nameUnknown: unknown;\n+nameUnknown = 123;\n \n let newVar: string = nameUnknown;\n"
+                },
+                {
+                    "date": 1642183835973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,5 @@\n \n let nameUnknown: unknown;\n nameUnknown = 123;\n \n-let newVar: string = nameUnknown;\n+let newVar: string = nameAny;\n"
+                },
+                {
+                    "date": 1642183927563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,11 @@\n // 일반 js 변수처럼 사용\n let nameAny: any;\n nameAny = 123;\n \n+// any와 유사하지만 타입실드를 해제하지 않음\n let nameUnknown: unknown;\n nameUnknown = 123;\n \n+// nameAny는 에러 검출 안됨\n+// nameUnknown은 에러 검출 됨\n let newVar: string = nameAny;\n"
+                },
+                {
+                    "date": 1642183992862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n+//\n+\n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n nameAny = 123;\n"
+                },
+                {
+                    "date": 1642184052588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n-//\n+// 간단한 연산도 타입이 맞아야 한다.\n+let var1: string = \"kim\";\n+let var2: number = 1;\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184071269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n // 간단한 연산도 타입이 맞아야 한다.\n let var1: string = \"kim\";\n let var2: number = 1;\n+var1 + 1;\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184079687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n // 간단한 연산도 타입이 맞아야 한다.\n let var1: string = \"kim\";\n let var2: number = 1;\n var1 + 1;\n+var2 + 1;\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184091267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n let var1: string = \"kim\";\n let var2: number = 1;\n var1 + 1;\n var2 + 1;\n+console.log(var1, var2);\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184181998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n \n // 간단한 연산도 타입이 맞아야 한다.\n let var1: string = \"kim\";\n let var2: number = 1;\n+let var3: number | string = 1;\n var1 + 1;\n var2 + 1;\n-console.log(var1, var2);\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184187731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n let var2: number = 1;\n let var3: number | string = 1;\n var1 + 1;\n var2 + 1;\n+var3 + 1;\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184247761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n // 간단한 연산도 타입이 맞아야 한다.\n-let var1: string = \"kim\";\n-let var2: number = 1;\n-let var3: number | string = 1;\n+let var1: string;\n+let var2: number;\n+let var3: number | string;\n var1 + 1;\n var2 + 1;\n var3 + 1;\n \n"
+                },
+                {
+                    "date": 1642184266182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n // 간단한 연산도 타입이 맞아야 한다.\n let var1: string;\n let var2: number;\n let var3: number | string;\n+\n var1 + 1;\n var2 + 1;\n var3 + 1;\n \n"
+                },
+                {
+                    "date": 1642184296351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n let var3: number | string;\n \n var1 + 1;\n var2 + 1;\n-var3 + 1;\n+// var3 + 1 은 에러 검출 됨\n+//\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                },
+                {
+                    "date": 1642184397129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,22 @@\n // 타입을 2개 이상 합친 새로운 타입 (Union Type)\n-// number type, string type이 아닌 'number | string' 이라는 새로운 타입\n let member: number | string = 1;\n let members: (number | string)[] = [1, \"2\", 3];\n let object: { a: string | number } = { a: 1 };\n \n // 간단한 연산도 타입이 맞아야 한다.\n+// string + 1 (허용)\n+// number + 1 (허용)\n+// string | number + 1 (허용 안됨)\n+// number type, string type이 아닌 'number | string' 이라는 새로운 타입이기 떄문\n+\n let var1: string;\n let var2: number;\n let var3: number | string;\n \n var1 + 1;\n var2 + 1;\n-// var3 + 1 은 에러 검출 됨\n-//\n+// var3 + 1 은 에러 검출\n \n // 타입실드 해제 문법\n // 일반 js 변수처럼 사용\n let nameAny: any;\n"
+                }
+            ],
+            "date": 1642183187827,
+            "name": "Commit-0",
+            "content": "let member: number | string = \"kim\";\n"
+        }
+    ]
+}
