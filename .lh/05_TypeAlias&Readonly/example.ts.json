@@ -1,0 +1,142 @@
+{
+    "sourceFile": "05_TypeAlias&Readonly/example.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1655174766350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655174801931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-type animal = string | number | undefined;\n+type animalType = string | number | undefined;\n+\n+let animal: animalType;\n"
+                },
+                {
+                    "date": 1655174938431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-type animalType = string | number | undefined;\n+type AnimalType = string | number | undefined;\n \n-let animal: animalType;\n+let animal: AnimalType;\n"
+                },
+                {
+                    "date": 1655179459897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-type AnimalType = string | number | undefined;\n+type AnimalType = { name: string; age: number };\n \n let animal: AnimalType;\n"
+                },
+                {
+                    "date": 1655179479717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n type AnimalType = { name: string; age: number };\n \n-let animal: AnimalType;\n+let animal: AnimalType = { name: \"원숭이\", age: 12 };\n"
+                },
+                {
+                    "date": 1655179678173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n type AnimalType = { name: string; age: number };\n \n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n+\n+type;\n+\n+const ReadOnlyObj = {\n+  name: \"우석\",\n+};\n"
+                },
+                {
+                    "date": 1655179708724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n type AnimalType = { name: string; age: number };\n \n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n \n-type;\n+type testType = { name: string };\n \n-const ReadOnlyObj = {\n+const readOnlyObj = {\n   name: \"우석\",\n };\n"
+                },
+                {
+                    "date": 1655179715977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n \n type testType = { name: string };\n \n-const readOnlyObj = {\n+const readOnlyObj: testType = {\n   name: \"우석\",\n };\n"
+                },
+                {
+                    "date": 1655179760845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n type AnimalType = { name: string; age: number };\n \n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n \n-type testType = { name: string };\n+type testType = { readonly name: string };\n \n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n"
+                },
+                {
+                    "date": 1655179793242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,6 @@\n \n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n+\n+readOnlyObj.name = \"asd\";\n"
+                },
+                {
+                    "date": 1655179881852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n type AnimalType = { name: string; age: number };\n \n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n \n-type testType = { readonly name: string };\n+type testType = { name?: string };\n \n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n"
+                },
+                {
+                    "date": 1655179914498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n type AnimalType = { name: string; age: number };\n \n let animal: AnimalType = { name: \"원숭이\", age: 12 };\n \n-type testType = { name?: string };\n+type testType = { readonly name?: string };\n \n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n-\n-readOnlyObj.name = \"asd\";\n"
+                },
+                {
+                    "date": 1655179949593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,8 @@\n \n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n+\n+type Name = string;\n+type Age = number;\n+type Name | Age\n"
+                },
+                {
+                    "date": 1655179975034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,5 @@\n };\n \n type Name = string;\n type Age = number;\n-type Name | Age\n+type Person = Name | Age;\n"
+                },
+                {
+                    "date": 1655180008682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,5 @@\n const readOnlyObj: testType = {\n   name: \"우석\",\n };\n \n-type Name = string;\n-type Age = number;\n-type Person = Name | Age;\n+type PositionX = { x: number };\n"
+                },
+                {
+                    "date": 1655180024149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,5 @@\n   name: \"우석\",\n };\n \n type PositionX = { x: number };\n+type PositionY = { y: number };\n"
+                },
+                {
+                    "date": 1655180070393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,5 @@\n };\n \n type PositionX = { x: number };\n type PositionY = { y: number };\n+type NewType = PositionX & PositionY;\n"
+                },
+                {
+                    "date": 1655180103124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,4 +10,6 @@\n \n type PositionX = { x: number };\n type PositionY = { y: number };\n type NewType = PositionX & PositionY;\n+\n+const position: NewType = { x: 10, y: 20 };\n"
+                },
+                {
+                    "date": 1655180121035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   name: \"우석\",\n };\n \n type PositionX = { x: number };\n-type PositionY = { y: number };\n+type PositionY = { y?: number };\n type NewType = PositionX & PositionY;\n \n-const position: NewType = { x: 10, y: 20 };\n+const position: NewType = { x: 10 };\n"
+                },
+                {
+                    "date": 1655180128141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   name: \"우석\",\n };\n \n type PositionX = { x: number };\n-type PositionY = { y?: number };\n+type PositionY = { y: number };\n type NewType = PositionX & PositionY;\n \n-const position: NewType = { x: 10 };\n+const position: NewType = { x: 10, y: 20 };\n"
+                },
+                {
+                    "date": 1655180202503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   name: \"우석\",\n };\n \n type PositionX = { x: number };\n-type PositionY = { y: number };\n+type PositionY = { x: number };\n type NewType = PositionX & PositionY;\n \n const position: NewType = { x: 10, y: 20 };\n"
+                },
+                {
+                    "date": 1655180221761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   name: \"우석\",\n };\n \n type PositionX = { x: number };\n-type PositionY = { x: number };\n+type PositionY = { x: number; y: number };\n type NewType = PositionX & PositionY;\n \n-const position: NewType = { x: 10, y: 20 };\n+const position: NewType = { x: 10 };\n"
+                },
+                {
+                    "date": 1655180238125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,5 @@\n type PositionX = { x: number };\n type PositionY = { x: number; y: number };\n type NewType = PositionX & PositionY;\n \n-const position: NewType = { x: 10 };\n+const position: NewType = { x: 10, y: 10 };\n"
+                },
+                {
+                    "date": 1655180310121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,6 @@\n type PositionY = { x: number; y: number };\n type NewType = PositionX & PositionY;\n \n const position: NewType = { x: 10, y: 10 };\n+\n+type ObjData = { color?: string };\n"
+                },
+                {
+                    "date": 1655180342182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n type NewType = PositionX & PositionY;\n \n const position: NewType = { x: 10, y: 10 };\n \n-type ObjData = { color?: string };\n+type ObjData = { color?: string; size: number; readonly position: number[] };\n"
+                },
+                {
+                    "date": 1655180380840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,9 @@\n \n const position: NewType = { x: 10, y: 10 };\n \n type ObjData = { color?: string; size: number; readonly position: number[] };\n+\n+let 테스트용변수: MyType = {\n+  size: 123,\n+  position: [1, 2, 3],\n+};\n"
+                },
+                {
+                    "date": 1655180470551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n const position: NewType = { x: 10, y: 10 };\n \n type ObjData = { color?: string; size: number; readonly position: number[] };\n \n-let 테스트용변수: MyType = {\n+let testVar: ObjData = {\n   size: 123,\n   position: [1, 2, 3],\n };\n+\n+type MyType = { name: string; phone: number; email: string };\n"
+                },
+                {
+                    "date": 1655180879385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,4 +21,5 @@\n   position: [1, 2, 3],\n };\n \n type MyType = { name: string; phone: number; email: string };\n+type adultType = \n"
+                },
+                {
+                    "date": 1655180983793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n   position: [1, 2, 3],\n };\n \n type MyType = { name: string; phone: number; email: string };\n-type adultType = \n+type AdultType = MyType & { adult: boolean };\n"
+                },
+                {
+                    "date": 1655181000976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,4 +22,10 @@\n };\n \n type MyType = { name: string; phone: number; email: string };\n type AdultType = MyType & { adult: boolean };\n+\n+let 회원가입정보: AdultType = {\n+  name: \"kim\",\n+  adult: false,\n+  phone: 1234,\n+};\n"
+                },
+                {
+                    "date": 1655181014581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   size: 123,\n   position: [1, 2, 3],\n };\n \n-type MyType = { name: string; phone: number; email: string };\n+type MyType = { name: string; phone: number; email?: string };\n type AdultType = MyType & { adult: boolean };\n \n let 회원가입정보: AdultType = {\n   name: \"kim\",\n"
+                },
+                {
+                    "date": 1655181113998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n type MyType = { name: string; phone: number; email?: string };\n type AdultType = MyType & { adult: boolean };\n \n-let 회원가입정보: AdultType = {\n+let joinInfo: AdultType = {\n   name: \"kim\",\n   adult: false,\n   phone: 1234,\n };\n"
+                }
+            ],
+            "date": 1655174766350,
+            "name": "Commit-0",
+            "content": "type animal = string | number | undefined;\n"
+        }
+    ]
+}

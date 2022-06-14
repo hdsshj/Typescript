@@ -1,0 +1,22 @@
+{
+    "sourceFile": "03_Union,any,unknown/example.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1655109789202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655109801060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n let user: string = \"kim\";\n let age1: undefined | number = undefined;\n let married: boolean = false;\n let 철수: (string | undefined | number | boolean)[] = [user, age1, married];\n-let test: number = \"kim\";\n \n let 학교: {\n   score: (number | boolean)[];\n   teacher: string;\n"
+                }
+            ],
+            "date": 1655109789202,
+            "name": "Commit-0",
+            "content": "// 타입 지정 해보기\nlet user: string = \"kim\";\nlet age1: undefined | number = undefined;\nlet married: boolean = false;\nlet 철수: (string | undefined | number | boolean)[] = [user, age1, married];\nlet test: number = \"kim\";\n\nlet 학교: {\n  score: (number | boolean)[];\n  teacher: string;\n  friend: string | string[];\n} = {\n  score: [100, 97, 84],\n  teacher: \"Phil\",\n  friend: \"John\",\n};\n학교.score[4] = false;\n학교.friend = [\"Lee\", 학교.teacher];\n"
+        }
+    ]
+}
