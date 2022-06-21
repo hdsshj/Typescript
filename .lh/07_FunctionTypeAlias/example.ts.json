@@ -1,0 +1,214 @@
+{
+    "sourceFile": "07_FunctionTypeAlias/example.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1655704852763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655704971417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n type FuncType = (a: string) => number;\n+\n+const newFunc: FuncType = (a) => {\n+  return;\n+};\n"
+                },
+                {
+                    "date": 1655704976670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n type FuncType = (a: string) => number;\n \n const newFunc: FuncType = (a) => {\n-  return;\n+  return 10;\n };\n"
+                },
+                {
+                    "date": 1655705013531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,4 +2,8 @@\n \n const newFunc: FuncType = (a) => {\n   return 10;\n };\n+\n+let userInfo = {\n+  name: \"kim\",\n+};\n"
+                },
+                {
+                    "date": 1655705122272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n+  objFunc(a) {\n+    return a + 1;\n+  },\n };\n"
+                },
+                {
+                    "date": 1655705135021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc(a) {\n+  objFunc(a: number): number {\n     return a + 1;\n   },\n };\n"
+                },
+                {
+                    "date": 1655705179881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc(a: number): number {\n+  objFunc: (FuncType = (a) => {\n     return a + 1;\n-  },\n+  }),\n };\n"
+                },
+                {
+                    "date": 1655705187260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc: (FuncType = (a) => {\n+  objFunc:FuncType = (a) => {\n     return a + 1;\n   }),\n };\n"
+                },
+                {
+                    "date": 1655705197126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc:FuncType = (a) => {\n+  objFunc: (FuncType = (a) => {\n     return a + 1;\n   }),\n };\n"
+                },
+                {
+                    "date": 1655705209646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc: (FuncType = (a) => {\n+  objFunc (FuncType = (a) => {\n     return a + 1;\n   }),\n };\n"
+                },
+                {
+                    "date": 1655705245349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc (FuncType = (a) => {\n+  objFunc(a) {\n     return a + 1;\n-  }),\n+  },\n };\n"
+                },
+                {
+                    "date": 1655705295853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc(a) {\n-    return a + 1;\n-  },\n+  objFunc(a) =>\n+    return a + 1\n+  ,\n };\n"
+                },
+                {
+                    "date": 1655705313820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,6 @@\n };\n \n let userInfo = {\n   name: \"kim\",\n-  objFunc(a) =>\n-    return a + 1\n-  ,\n+  objFunc: (a) => a + 1,\n };\n"
+                },
+                {
+                    "date": 1655705541119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,16 @@\n const newFunc: FuncType = (a) => {\n   return 10;\n };\n \n-let userInfo = {\n-  name: \"kim\",\n-  objFunc: (a) => a + 1,\n-};\n+let userInfo = let 회원정보 = {\n+  name : 'kim',\n+  age : 30,\n+  plusOne (x){\n+    return x + 1\n+  },\n+  changeName : () => {\n+    console.log('안녕')\n+  }\n+}\n+회원정보.plusOne(1);\n+회원정보.changeName();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1655705549468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,16 @@\n const newFunc: FuncType = (a) => {\n   return 10;\n };\n \n-let userInfo = let 회원정보 = {\n-  name : 'kim',\n-  age : 30,\n-  plusOne (x){\n-    return x + 1\n+let userInfo = {\n+  name: \"kim\",\n+  age: 30,\n+  plusOne(x) {\n+    return x + 1;\n   },\n-  changeName : () => {\n\\ No newline at end of file\n-    console.log('안녕')\n-  }\n-}\n-회원정보.plusOne(1);\n-회원정보.changeName();\n+  changeName: () => {\n+    console.log(\"안녕\");\n+  },\n+};\n+userInfo.plusOne(1);\n+userInfo.changeName();\n"
+                },
+                {
+                    "date": 1655705570207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n   age: 30,\n   plusOne(x) {\n     return x + 1;\n   },\n-  changeName: () => {\n+  changeName: (): void => {\n     console.log(\"안녕\");\n   },\n };\n+\n userInfo.plusOne(1);\n userInfo.changeName();\n"
+                },
+                {
+                    "date": 1655705599034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   age: 30,\n   plusOne(x) {\n     return x + 1;\n   },\n-  changeName: (): void => {\n+  changeName: () => {\n     console.log(\"안녕\");\n   },\n };\n \n"
+                },
+                {
+                    "date": 1655705658192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,15 @@\n const newFunc: FuncType = (a) => {\n   return 10;\n };\n \n+type UserInfoType = {\n+  name: string,\n+  age: number,\n+  plusOne = (x: number) => number;\n+  changeName = () => void\n+}\n+\n let userInfo = {\n   name: \"kim\",\n   age: 30,\n   plusOne(x) {\n"
+                },
+                {
+                    "date": 1655705671692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \n type UserInfoType = {\n   name: string,\n   age: number,\n-  plusOne = (x: number) => number;\n-  changeName = () => void\n+  plusOne: (x: number) => number,\n+  changeName = () => void,\n }\n \n let userInfo = {\n   name: \"kim\",\n"
+                },
+                {
+                    "date": 1655705683243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n   return 10;\n };\n \n type UserInfoType = {\n-  name: string,\n-  age: number,\n-  plusOne: (x: number) => number,\n-  changeName = () => void,\n-}\n+  name: string;\n+  age: number;\n+  plusOne: (x: number) => number;\n+  changeName: () => void;\n+};\n \n-let userInfo = {\n+let userInfo: UserInfoType = {\n   name: \"kim\",\n   age: 30,\n   plusOne(x) {\n     return x + 1;\n"
+                },
+                {
+                    "date": 1655705798247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,4 +23,8 @@\n };\n \n userInfo.plusOne(1);\n userInfo.changeName();\n+\n+const cutZero = (a) => {\n+  a;\n+};\n"
+                },
+                {
+                    "date": 1655705965285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,9 @@\n \n userInfo.plusOne(1);\n userInfo.changeName();\n \n-const cutZero = (a) => {\n-  a;\n+const cutZero = (a: string) => {\n+  if (a.charAt(0) === \"0\") {\n+    a.substring(1, a.length);\n+  }\n };\n"
+                },
+                {
+                    "date": 1655705980900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,9 @@\n userInfo.changeName();\n \n const cutZero = (a: string) => {\n   if (a.charAt(0) === \"0\") {\n-    a.substring(1, a.length);\n+    return a.substring(1, a.length);\n+  } else {\n+    return a;\n   }\n };\n"
+                },
+                {
+                    "date": 1655705996084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,4 +31,6 @@\n   } else {\n     return a;\n   }\n };\n+\n+cutZero(\"0121231\");\n"
+                },
+                {
+                    "date": 1655706051760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n userInfo.plusOne(1);\n userInfo.changeName();\n \n const cutZero = (a: string) => {\n+  console.log(a);\n   if (a.charAt(0) === \"0\") {\n     return a.substring(1, a.length);\n   } else {\n     return a;\n"
+                },
+                {
+                    "date": 1655706067089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n \n const cutZero = (a: string) => {\n   console.log(a);\n   if (a.charAt(0) === \"0\") {\n+    console.log(a.charAt(0));\n     return a.substring(1, a.length);\n   } else {\n     return a;\n   }\n"
+                },
+                {
+                    "date": 1655706082086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n const cutZero = (a: string) => {\n   console.log(a);\n   if (a.charAt(0) === \"0\") {\n-    console.log(a.charAt(0));\n+    console.log(a.substring(1, a.length));\n     return a.substring(1, a.length);\n   } else {\n     return a;\n   }\n"
+                },
+                {
+                    "date": 1655706109919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,5 @@\n     return a;\n   }\n };\n \n-cutZero(\"0121231\");\n+console.log(cutZero(\"0121231\"));\n"
+                },
+                {
+                    "date": 1655706118136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,12 @@\n userInfo.plusOne(1);\n userInfo.changeName();\n \n const cutZero = (a: string) => {\n-  console.log(a);\n   if (a.charAt(0) === \"0\") {\n-    console.log(a.substring(1, a.length));\n     return a.substring(1, a.length);\n   } else {\n     return a;\n   }\n };\n \n-console.log(cutZero(\"0121231\"));\n+console.log(cutZero(\"121231\"));\n"
+                },
+                {
+                    "date": 1655706125914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,5 +32,5 @@\n     return a;\n   }\n };\n \n-console.log(cutZero(\"121231\"));\n+console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706200442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,5 +32,7 @@\n     return a;\n   }\n };\n \n+const removeDash = (a: string) => {};\n+\n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706213015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,7 @@\n     return a;\n   }\n };\n \n-const removeDash = (a: string) => {};\n+const removeDash = (a: string): number => {};\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706219105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,9 @@\n     return a;\n   }\n };\n \n-const removeDash = (a: string): number => {};\n+const removeDash = (a: string): number => {\n+  return;\n+};\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706249664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n+  a.replace(\"-\", \"\");\n   return;\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706257618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,8 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n-  a.replace(\"-\", \"\");\n-  return;\n+  return a.replace(\"-\", \"\");\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706267009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,8 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n-  return a.replace(\"-\", \"\");\n+  return Number(a.replace(\"-\", \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706303305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,4 +37,5 @@\n   return Number(a.replace(\"-\", \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n+console.log(removeDash(\"123-213-123\"));\n"
+                },
+                {
+                    "date": 1655706321454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n+  console.log(a);\n   return Number(a.replace(\"-\", \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706333464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n-  console.log(a);\n+  console.log(a.replace(\"-\", \"\"));\n   return Number(a.replace(\"-\", \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706369602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   }\n };\n \n const removeDash = (a: string): number => {\n-  console.log(a.replace(\"-\", \"\"));\n+  console.log(a.replace(/-/g, \"\"));\n   return Number(a.replace(\"-\", \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706382874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n };\n \n const removeDash = (a: string): number => {\n   console.log(a.replace(/-/g, \"\"));\n-  return Number(a.replace(\"-\", \"\"));\n+  return Number(a.replace(/-/g, \"\"));\n };\n \n console.log(cutZero(\"0이거\"));\n console.log(removeDash(\"123-213-123\"));\n"
+                },
+                {
+                    "date": 1655706511655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,6 +37,10 @@\n   console.log(a.replace(/-/g, \"\"));\n   return Number(a.replace(/-/g, \"\"));\n };\n \n+const testCallBack = (phoneNum, func1, func2) => {\n+  func2(func1(phoneNum));\n+};\n+\n console.log(cutZero(\"0이거\"));\n console.log(removeDash(\"123-213-123\"));\n"
+                },
+                {
+                    "date": 1655706546635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n \n userInfo.plusOne(1);\n userInfo.changeName();\n \n+type CutZeroFuncType = (a: string) => string;\n+\n const cutZero = (a: string) => {\n   if (a.charAt(0) === \"0\") {\n     return a.substring(1, a.length);\n   } else {\n@@ -38,9 +40,9 @@\n   return Number(a.replace(/-/g, \"\"));\n };\n \n const testCallBack = (phoneNum, func1, func2) => {\n-  func2(func1(phoneNum));\n+  return func2(func1(phoneNum));\n };\n \n console.log(cutZero(\"0이거\"));\n console.log(removeDash(\"123-213-123\"));\n"
+                },
+                {
+                    "date": 1655706630541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,14 @@\n userInfo.plusOne(1);\n userInfo.changeName();\n \n type CutZeroFuncType = (a: string) => string;\n+type RemoveDashFuncType = (a: string) => number;\n+type TestCallBackType = (\n+  phoneNum: string,\n+  func1: () => {},\n+  func2: () => {}\n+) => number;\n \n const cutZero = (a: string) => {\n   if (a.charAt(0) === \"0\") {\n     return a.substring(1, a.length);\n"
+                },
+                {
+                    "date": 1655706640835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   console.log(a.replace(/-/g, \"\"));\n   return Number(a.replace(/-/g, \"\"));\n };\n \n-const testCallBack = (phoneNum, func1, func2) => {\n+const testCallBack: TestCallBackType = (phoneNum, func1, func2) => {\n   return func2(func1(phoneNum));\n };\n \n console.log(cutZero(\"0이거\"));\n"
+                },
+                {
+                    "date": 1655706663159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n type CutZeroFuncType = (a: string) => string;\n type RemoveDashFuncType = (a: string) => number;\n type TestCallBackType = (\n   phoneNum: string,\n-  func1: () => {},\n-  func2: () => {}\n+  func1: CutZeroFuncType,\n+  func2: RemoveDashFuncType\n ) => number;\n \n const cutZero = (a: string) => {\n   if (a.charAt(0) === \"0\") {\n"
+                },
+                {
+                    "date": 1655706684509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   func1: CutZeroFuncType,\n   func2: RemoveDashFuncType\n ) => number;\n \n-const cutZero = (a: string) => {\n+const cutZero: CutZeroFuncType = (a: string) => {\n   if (a.charAt(0) === \"0\") {\n     return a.substring(1, a.length);\n   } else {\n     return a;\n"
+                },
+                {
+                    "date": 1655706696699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,17 +32,17 @@\n   func1: CutZeroFuncType,\n   func2: RemoveDashFuncType\n ) => number;\n \n-const cutZero: CutZeroFuncType = (a: string) => {\n+const cutZero: CutZeroFuncType = (a) => {\n   if (a.charAt(0) === \"0\") {\n     return a.substring(1, a.length);\n   } else {\n     return a;\n   }\n };\n \n-const removeDash = (a: string): number => {\n+const removeDash: RemoveDashFuncType = (a) => {\n   console.log(a.replace(/-/g, \"\"));\n   return Number(a.replace(/-/g, \"\"));\n };\n \n"
+                },
+                {
+                    "date": 1655706726009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,4 +51,5 @@\n };\n \n console.log(cutZero(\"0이거\"));\n console.log(removeDash(\"123-213-123\"));\n+console.log(testCallBack(\"010-7668-1735\", cutZero, removeDash));\n"
+                },
+                {
+                    "date": 1655706735221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,8 @@\n   }\n };\n \n const removeDash: RemoveDashFuncType = (a) => {\n-  console.log(a.replace(/-/g, \"\"));\n   return Number(a.replace(/-/g, \"\"));\n };\n \n const testCallBack: TestCallBackType = (phoneNum, func1, func2) => {\n"
+                }
+            ],
+            "date": 1655704852762,
+            "name": "Commit-0",
+            "content": "type FuncType = (a: string) => number;\n"
+        }
+    ]
+}

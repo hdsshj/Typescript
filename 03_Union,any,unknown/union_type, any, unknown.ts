@@ -13,8 +13,8 @@ let var1: string;
 let var2: number;
 let var3: number | string;
 
-var1 + 1;
-var2 + 1;
+// var1 + 1;
+// var2 + 1;
 // var3 + 1 은 에러 검출
 
 // 타입실드 해제 문법

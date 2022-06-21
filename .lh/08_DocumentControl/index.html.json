@@ -1,0 +1,38 @@
+{
+    "sourceFile": "08_DocumentControl/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1655706904029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655706947472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n <h4 id=\"title\">안녕하세요</h4>\n+<a href=\"www.naver.com\">링크</a>\n+<button id=\"button\">버튼</button>\n+\n+<script></script>\n"
+                },
+                {
+                    "date": 1655706968757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <h4 id=\"title\">안녕하세요</h4>\n <a href=\"www.naver.com\">링크</a>\n <button id=\"button\">버튼</button>\n \n-<script></script>\n+<script src=\"index.js\"></script>\n"
+                },
+                {
+                    "date": 1655707581909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <h4 id=\"title\">안녕하세요</h4>\n-<a href=\"www.naver.com\">링크</a>\n+<a href=\"www.naver.com\" class=\"link\">링크</a>\n <button id=\"button\">버튼</button>\n \n <script src=\"index.js\"></script>\n"
+                },
+                {
+                    "date": 1655708147448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <h4 id=\"title\">안녕하세요</h4>\n <a href=\"www.naver.com\" class=\"link\">링크</a>\n <button id=\"button\">버튼</button>\n+<img id=\"image\" src=\"test.jpg\" />\n \n <script src=\"index.js\"></script>\n"
+                },
+                {
+                    "date": 1655709569341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n <h4 id=\"title\">안녕하세요</h4>\n <a href=\"www.naver.com\" class=\"link\">링크</a>\n+\n+<a class=\"naver\" href=\"naver.com\">링크</a>\n+<a class=\"naver\" href=\"naver.com\">링크</a>\n+<a class=\"naver\" href=\"naver.com\">링크</a>\n <button id=\"button\">버튼</button>\n <img id=\"image\" src=\"test.jpg\" />\n \n <script src=\"index.js\"></script>\n"
+                }
+            ],
+            "date": 1655706904029,
+            "name": "Commit-0",
+            "content": "<h4 id=\"title\">안녕하세요</h4>\n"
+        }
+    ]
+}

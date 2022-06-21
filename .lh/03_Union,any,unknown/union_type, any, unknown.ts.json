@@ -1,0 +1,18 @@
+{
+    "sourceFile": "03_Union,any,unknown/union_type, any, unknown.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1655708322527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1655708322527,
+            "name": "Commit-0",
+            "content": "// 타입을 2개 이상 합친 새로운 타입 (Union Type)\nlet member: number | string = 1;\nlet members: (number | string)[] = [1, \"2\", 3];\nlet object: { a: string | number } = { a: 1 };\n\n// 간단한 연산도 타입이 맞아야 한다.\n// string + 1 (허용)\n// number + 1 (허용)\n// string | number + 1 (허용 안됨)\n// number type, string type이 아닌 'number | string' 이라는 새로운 타입이기 떄문\n\nlet var1: string;\nlet var2: number;\nlet var3: number | string;\n\n// var3 + 1 은 에러 검출\n\n// 타입실드 해제 문법\n// 일반 js 변수처럼 사용\nlet nameAny: any;\nnameAny = 123;\n\n// any와 유사하지만 타입실드를 해제하지 않음\nlet nameUnknown: unknown;\nnameUnknown = 123;\n\n// nameAny는 에러 검출 안됨\n// nameUnknown은 에러 검출 됨\nlet newVar: string = nameAny;\n"
+        }
+    ]
+}

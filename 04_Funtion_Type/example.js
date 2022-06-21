@@ -1,5 +1,5 @@
 function test(x) {
-    var array = [];
+    let array = [];
     array[0] = x;
     console.log(array);
 }

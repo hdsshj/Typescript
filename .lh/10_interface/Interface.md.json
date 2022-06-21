@@ -1,0 +1,58 @@
+{
+    "sourceFile": "10_interface/Interface.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1655785261249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655785291447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,13 @@\n - interface는 중복 선언이 가능\n - type은 중복 선언이 불가능\n \n ```ts\n+// interface extends\n+interface Animal {\n+  name: string;\n+}\n \n+interface Cat extends Animal {\n+  legs: number;\n+}\n ```\n"
+                },
+                {
+                    "date": 1655785424261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,25 @@\n-## Interface 와 Type 의 차이점\n+## Interface\n \n-- interface는 중복 선언이 가능\n-- type은 중복 선언이 불가능\n+- object 자료형의 타입을 보다 편리하게 지정 가능\n \n ```ts\n+\n+```\n+\n+```ts\n // interface extends\n interface Animal {\n   name: string;\n }\n \n interface Cat extends Animal {\n   legs: number;\n }\n+\n+// type alias extends\n+type Animal = {\n+  name: string;\n+};\n+\n+type Cat = Animal & { legs: number };\n ```\n"
+                },
+                {
+                    "date": 1655785429613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,14 @@\n \n - object 자료형의 타입을 보다 편리하게 지정 가능\n \n ```ts\n+interface Square {\n+  color: string;\n+  width: number;\n+}\n \n+let 네모: Square = { color: \"red\", width: 100 };\n ```\n \n ```ts\n // interface extends\n"
+                },
+                {
+                    "date": 1655785438465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   color: string;\n   width: number;\n }\n \n-let 네모: Square = { color: \"red\", width: 100 };\n+let square: Square = { color: \"red\", width: 100 };\n ```\n \n ```ts\n // interface extends\n"
+                },
+                {
+                    "date": 1655785448224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n \n - object 자료형의 타입을 보다 편리하게 지정 가능\n \n ```ts\n-interface Square {\n+interface SquareType {\n   color: string;\n   width: number;\n }\n \n-let square: Square = { color: \"red\", width: 100 };\n+let square: SquareType = { color: \"red\", width: 100 };\n ```\n \n ```ts\n // interface extends\n"
+                },
+                {
+                    "date": 1655785754998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n ## Interface\n \n - object 자료형의 타입을 보다 편리하게 지정 가능\n+- type alise와 용도와 기능이 똑같음\n \n ```ts\n interface SquareType {\n   color: string;\n@@ -10,8 +11,10 @@\n \n let square: SquareType = { color: \"red\", width: 100 };\n ```\n \n+- extends가 가능\n+\n ```ts\n // interface extends\n interface Animal {\n   name: string;\n@@ -27,4 +30,14 @@\n };\n \n type Cat = Animal & { legs: number };\n ```\n+\n+## 차이점\n+\n+- interface는 중복선언을 허용해주며 extends 한 것과 동일하게 동작함\n+- type은 중복선언이 불가능\n+- type 선언을 자주 쓰는 외부 라이브러리 이용시 type 선언을 override 하기 편함\n+\n+```ts\n+\n+```\n"
+                },
+                {
+                    "date": 1655785763212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,6 +38,12 @@\n - type은 중복선언이 불가능\n - type 선언을 자주 쓰는 외부 라이브러리 이용시 type 선언을 override 하기 편함\n \n ```ts\n+interface Animal {\n+  name: string;\n+}\n \n+interface Animal {\n+  legs: number;\n+}\n ```\n"
+                },
+                {
+                    "date": 1655785844014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,12 +38,24 @@\n - type은 중복선언이 불가능\n - type 선언을 자주 쓰는 외부 라이브러리 이용시 type 선언을 override 하기 편함\n \n ```ts\n+// interface 중복 선언\n+// Animal = {name : string, legs:number}\n interface Animal {\n   name: string;\n }\n \n interface Animal {\n   legs: number;\n }\n+\n+// type 중복 선언\n+// 에러 발생함\n+type Animal = {\n+  name: string;\n+};\n+\n+type Animal = {\n+  legs: number;\n+};\n ```\n"
+                },
+                {
+                    "date": 1655785851940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n - type 선언을 자주 쓰는 외부 라이브러리 이용시 type 선언을 override 하기 편함\n \n ```ts\n // interface 중복 선언\n-// Animal = {name : string, legs:number}\n+// Animal = {name: string, legs: number}\n interface Animal {\n   name: string;\n }\n \n"
+                },
+                {
+                    "date": 1655785929306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,10 @@\n \n type Cat = Animal & { legs: number };\n ```\n \n+<br>\n+\n ## 차이점\n \n - interface는 중복선언을 허용해주며 extends 한 것과 동일하게 동작함\n - type은 중복선언이 불가능\n"
+                }
+            ],
+            "date": 1655785261249,
+            "name": "Commit-0",
+            "content": "## Interface 와 Type 의 차이점\n\n- interface는 중복 선언이 가능\n- type은 중복 선언이 불가능\n\n```ts\n\n```\n"
+        }
+    ]
+}

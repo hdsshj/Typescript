@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1642097776135,
@@ -16,6 +16,34 @@
                 {
                     "date": 1642097802071,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ESNEXT\",\n+    \"target\": \"ES5\",\n     \"module\": \"CommonJS\"\n   }\n }\n"
+                },
+                {
+                    "date": 1655707055284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\n   \"compilerOptions\": {\n     \"target\": \"ES5\",\n     \"module\": \"CommonJS\"\n+    \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655707062674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n     \"target\": \"ES5\",\n-    \"module\": \"CommonJS\"\n+    \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655708932005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ES5\",\n+    \"target\": \"ES NEXT\",\n     \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655708977808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ES NEXT\",\n+    \"target\": \"ESnext\",\n     \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655709046801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ESnext\",\n+    \"target\": \"ES6\",\n     \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655709378796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ES6\",\n+    \"target\": \"es2022\",\n     \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
+                },
+                {
+                    "date": 1655709389038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"es2022\",\n+    \"target\": \"esnext\",\n     \"module\": \"CommonJS\",\n     \"strictNullChecks\": true\n   }\n }\n"
                 }
             ],
             "date": 1642097776135,

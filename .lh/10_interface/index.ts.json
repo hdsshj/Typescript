@@ -1,0 +1,138 @@
+{
+    "sourceFile": "10_interface/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1655777556416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655777597281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n+type Square = {\n+  color: string;\n+  width: number;\n+};\n+\n let nemo = { color: \"red\", width: 100 };\n"
+                },
+                {
+                    "date": 1655777609123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-type Square = {\n+interface Square = {\n   color: string;\n   width: number;\n };\n \n"
+                },
+                {
+                    "date": 1655777643285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n-interface Square = {\n+interface Square {\n   color: string;\n   width: number;\n-};\n+}\n \n let nemo = { color: \"red\", width: 100 };\n+\n+let;\n"
+                },
+                {
+                    "date": 1655777659947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n }\n \n let nemo = { color: \"red\", width: 100 };\n \n-let;\n+let student;\n"
+                },
+                {
+                    "date": 1655777683857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n }\n \n let nemo = { color: \"red\", width: 100 };\n \n-let student;\n+let interface1 = { name: \"kim\" };\n+let interface2 = { name: \"park\", age: 12 };\n"
+                },
+                {
+                    "date": 1655777736746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,15 @@\n }\n \n let nemo = { color: \"red\", width: 100 };\n \n+interface Inter1 {\n+  name: string;\n+}\n+\n+interface Inter2 {\n+  name: string;\n+  age: number;\n+}\n+\n let interface1 = { name: \"kim\" };\n let interface2 = { name: \"park\", age: 12 };\n"
+                },
+                {
+                    "date": 1655777745801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n   name: string;\n   age: number;\n }\n \n-let interface1 = { name: \"kim\" };\n-let interface2 = { name: \"park\", age: 12 };\n+let interface1: Inter1 = { name: \"kim\" };\n+let interface2: Inter2 = { name: \"park\", age: 12 };\n"
+                },
+                {
+                    "date": 1655778000177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,9 @@\n interface Inter1 {\n   name: string;\n }\n \n-interface Inter2 {\n-  name: string;\n+interface Inter2 extants Inter1 {\n   age: number;\n }\n \n let interface1: Inter1 = { name: \"kim\" };\n"
+                },
+                {
+                    "date": 1655778014785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n interface Inter1 {\n   name: string;\n }\n \n-interface Inter2 extants Inter1 {\n+interface Inter2 extends Inter1 {\n   age: number;\n }\n \n let interface1: Inter1 = { name: \"kim\" };\n"
+                },
+                {
+                    "date": 1655778294333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,8 @@\n interface Inter2 extends Inter1 {\n   age: number;\n }\n \n+type Animal = { name: string };\n+\n let interface1: Inter1 = { name: \"kim\" };\n let interface2: Inter2 = { name: \"park\", age: 12 };\n"
+                },
+                {
+                    "date": 1655778319392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,8 @@\n   age: number;\n }\n \n type Animal = { name: string };\n+type Cat = { age: number } & Animal;\n \n let interface1: Inter1 = { name: \"kim\" };\n let interface2: Inter2 = { name: \"park\", age: 12 };\n"
+                },
+                {
+                    "date": 1655786020456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,4 +17,8 @@\n type Cat = { age: number } & Animal;\n \n let interface1: Inter1 = { name: \"kim\" };\n let interface2: Inter2 = { name: \"park\", age: 12 };\n+\n+interface UnitType\n+\n+let unit = { brand : 'Samsung', serialNumber : 1360, model : ['TV', 'phone'] }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1655786034460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,11 @@\n \n let interface1: Inter1 = { name: \"kim\" };\n let interface2: Inter2 = { name: \"park\", age: 12 };\n \n-interface UnitType\n+interface UnitType {\n+  brand: \"Samsung\";\n\\ No newline at end of file\n+  serialNumber: 1360;\n+  model: [\"TV\", \"phone\"];\n+}\n \n-let unit = { brand : 'Samsung', serialNumber : 1360, model : ['TV', 'phone'] }\n+let unit = { brand: \"Samsung\", serialNumber: 1360, model: [\"TV\", \"phone\"] };\n"
+                },
+                {
+                    "date": 1655786043358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n let interface1: Inter1 = { name: \"kim\" };\n let interface2: Inter2 = { name: \"park\", age: 12 };\n \n interface UnitType {\n-  brand: \"Samsung\";\n-  serialNumber: 1360;\n+  brand: string;\n+  serialNumber: number;\n   model: [\"TV\", \"phone\"];\n }\n\\ No newline at end of file\n \n-let unit = { brand: \"Samsung\", serialNumber: 1360, model: [\"TV\", \"phone\"] };\n+let unit = { brand: \"Samsung\", serialNumber: 1360, model: [\"TV\", \"phone\"] };\n"
+                },
+                {
+                    "date": 1655786052188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,12 @@\n \n interface UnitType {\n   brand: string;\n   serialNumber: number;\n-  model: [\"TV\", \"phone\"];\n+  model: ;\n }\n \n\\ No newline at end of file\n-let unit = { brand: \"Samsung\", serialNumber: 1360, model: [\"TV\", \"phone\"] };\n+let unit: UnitType = {\n+  brand: \"Samsung\",\n+  serialNumber: 1360,\n+  model: [\"TV\", \"phone\"],\n+};\n"
+                },
+                {
+                    "date": 1655786094748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,17 @@\n \n interface UnitType {\n   brand: string;\n   serialNumber: number;\n-  model: ;\n+  model: string[];\n }\n \n let unit: UnitType = {\n   brand: \"Samsung\",\n   serialNumber: 1360,\n   model: [\"TV\", \"phone\"],\n\\ No newline at end of file\n-};\n+};\n+\n+let bucket = [\n+  { product: \"청소기\", price: 7000 },\n+  { product: \"삼다수\", price: 800 },\n+];\n"
+                },
+                {
+                    "date": 1655786141831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,12 @@\n   serialNumber: 1360,\n   model: [\"TV\", \"phone\"],\n };\n \n+interface BucketType {\n+  string[]\n+}\n+\n\\ No newline at end of file\n let bucket = [\n   { product: \"청소기\", price: 7000 },\n   { product: \"삼다수\", price: 800 },\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786180963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,12 @@\n   model: [\"TV\", \"phone\"],\n };\n \n interface BucketType {\n-  string[]\n+  product: \"청소기\";\n+  price: 7000;\n }\n \n let bucket = [\n   { product: \"청소기\", price: 7000 },\n\\ No newline at end of file\n   { product: \"삼다수\", price: 800 },\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786190193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,12 +31,12 @@\n   model: [\"TV\", \"phone\"],\n };\n \n interface BucketType {\n-  product: \"청소기\";\n-  price: 7000;\n+  product: string;\n+  price: number;\n }\n \n let bucket = [\n   { product: \"청소기\", price: 7000 },\n\\ No newline at end of file\n   { product: \"삼다수\", price: 800 },\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786203145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n   product: string;\n   price: number;\n }\n \n-let bucket = [\n+let bucket: BucketType[] = [\n   { product: \"청소기\", price: 7000 },\n   { product: \"삼다수\", price: 800 },\n\\ No newline at end of file\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786289899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,12 @@\n   product: string;\n   price: number;\n }\n \n+interface NewBucketType extends BucketType {\n+  card: boolean;\n+}\n+\n\\ No newline at end of file\n let bucket: BucketType[] = [\n   { product: \"청소기\", price: 7000 },\n   { product: \"삼다수\", price: 800 },\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786300676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n   price: number;\n }\n \n interface NewBucketType extends BucketType {\n-  card: boolean;\n+  card?: boolean;\n }\n \n-let bucket: BucketType[] = [\n+let bucket: NewBucketType[] = [\n   { product: \"청소기\", price: 7000 },\n\\ No newline at end of file\n   { product: \"삼다수\", price: 800 },\n-];\n+];\n"
+                },
+                {
+                    "date": 1655786308651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,6 @@\n \n let bucket: NewBucketType[] = [\n   { product: \"청소기\", price: 7000 },\n   { product: \"삼다수\", price: 800 },\n-];\n\\ No newline at end of file\n+  { product: \"삼다수\", price: 800, card: true },\n+];\n"
+                },
+                {
+                    "date": 1655786445233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,4 +44,12 @@\n   { product: \"청소기\", price: 7000 },\n   { product: \"삼다수\", price: 800 },\n   { product: \"삼다수\", price: 800, card: true },\n ];\n+\n+interface FuncDockType {\n+  plus : (a:number, b:number) => number\n+}\n+\n+let funcDock = {\n+  func1:\n+}\n"
+                },
+                {
+                    "date": 1655786470484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,11 @@\n   { product: \"삼다수\", price: 800, card: true },\n ];\n \n interface FuncDockType {\n-  plus : (a:number, b:number) => number\n+  plus: (a: number, b: number) => number,\n+  minus: (a: number, b: number) => number\n+  \n }\n \n let funcDock = {\n   func1:\n"
+                },
+                {
+                    "date": 1655786475840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,9 @@\n ];\n \n interface FuncDockType {\n   plus: (a: number, b: number) => number,\n-  minus: (a: number, b: number) => number\n-  \n+  minus: (a: number, b: number) => number,\n }\n \n let funcDock = {\n   func1:\n"
+                },
+                {
+                    "date": 1655786508773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,11 +46,11 @@\n   { product: \"삼다수\", price: 800, card: true },\n ];\n \n interface FuncDockType {\n-  plus: (a: number, b: number) => number,\n-  minus: (a: number, b: number) => number,\n+  plus: (a: number, b: number) => number;\n+  minus: (a: number, b: number) => number;\n }\n \n let funcDock = {\n-  func1:\n-}\n+  plus: (a, b) => a + b,\n+};\n"
+                },
+                {
+                    "date": 1655786522123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,6 @@\n }\n \n let funcDock = {\n   plus: (a, b) => a + b,\n+  minus: (a, b) => a - b,\n };\n"
+                },
+                {
+                    "date": 1655786527279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,8 @@\n   plus: (a: number, b: number) => number;\n   minus: (a: number, b: number) => number;\n }\n \n-let funcDock = {\n+let funcDock: FuncDockType = {\n   plus: (a, b) => a + b,\n   minus: (a, b) => a - b,\n };\n"
+                },
+                {
+                    "date": 1655786538055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,4 +54,6 @@\n let funcDock: FuncDockType = {\n   plus: (a, b) => a + b,\n   minus: (a, b) => a - b,\n };\n+\n+funcDock.minus(2, 1);\n"
+                }
+            ],
+            "date": 1655777556416,
+            "name": "Commit-0",
+            "content": "let nemo = { color: \"red\", width: 100 };\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "06_Literal_Types/111.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1655186516452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1655186516452,
+            "name": "Commit-0",
+            "content": "const test;\n"
+        }
+    ]
+}

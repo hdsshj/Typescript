@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1655706978381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1655706978381,
+            "name": "Commit-0",
+            "content": "{\n  \"liveServer.settings.port\": 3001\n}\n"
+        }
+    ]
+}

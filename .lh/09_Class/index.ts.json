@@ -1,0 +1,214 @@
+{
+    "sourceFile": "09_Class/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1655773651521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655773704250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-const;\n+const machine = () => {\n+  this.q = \"strike\";\n+  this.w = \"snowball\";\n+};\n"
+                },
+                {
+                    "date": 1655773723240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n const machine = () => {\n   this.q = \"strike\";\n   this.w = \"snowball\";\n };\n+\n+machine.prototype.name = \"kim\";\n"
+                },
+                {
+                    "date": 1655773737897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,6 @@\n   this.w = \"snowball\";\n };\n \n machine.prototype.name = \"kim\";\n+\n+const nunu = new machine();\n"
+                },
+                {
+                    "date": 1655773748856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-const machine = () => {\n+const Machine = () => {\n   this.q = \"strike\";\n   this.w = \"snowball\";\n };\n \n-machine.prototype.name = \"kim\";\n+Machine.prototype.name = \"kim\";\n \n-const nunu = new machine();\n+const nunu = new Machine();\n"
+                },
+                {
+                    "date": 1655773765092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,7 @@\n \n Machine.prototype.name = \"kim\";\n \n const nunu = new Machine();\n+\n+console.log(nunu);\n+console.log(nunu.name);\n"
+                },
+                {
+                    "date": 1655773933731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const Machine = () => {\n+let Machine = () => {\n   this.q = \"strike\";\n   this.w = \"snowball\";\n };\n \n"
+                },
+                {
+                    "date": 1655773948553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-let Machine = () => {\n+function Machine() {\n   this.q = \"strike\";\n   this.w = \"snowball\";\n-};\n+}\n \n Machine.prototype.name = \"kim\";\n \n const nunu = new Machine();\n"
+                },
+                {
+                    "date": 1655774448108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,10 @@\n const nunu = new Machine();\n \n console.log(nunu);\n console.log(nunu.name);\n+\n+class Person {\n+  constructor() {\n+    this.name = \"kim\";\n+  }\n+}\n"
+                },
+                {
+                    "date": 1655774558074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n console.log(nunu.name);\n \n class Person {\n   constructor() {\n+    name;\n     this.name = \"kim\";\n   }\n }\n"
+                },
+                {
+                    "date": 1655774571297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,7 @@\n console.log(nunu.name);\n \n class Person {\n   constructor() {\n-    name;\n     this.name = \"kim\";\n   }\n }\n"
+                },
+                {
+                    "date": 1655774576502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n console.log(nunu);\n console.log(nunu.name);\n \n class Person {\n+  name: string;\n   constructor() {\n     this.name = \"kim\";\n   }\n }\n"
+                },
+                {
+                    "date": 1655774672545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n console.log(nunu.name);\n \n class Person {\n   name: string;\n-  constructor() {\n-    this.name = \"kim\";\n+\n+  constructor(a: string) {\n+    this.name = a;\n   }\n }\n"
+                },
+                {
+                    "date": 1655774696213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,4 +16,6 @@\n   constructor(a: string) {\n     this.name = a;\n   }\n }\n+\n+let person1 = new Person(\"kim\");\n"
+                },
+                {
+                    "date": 1655774702416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,4 +18,5 @@\n   }\n }\n \n let person1 = new Person(\"kim\");\n+let person2 = new Person(\"Park\");\n"
+                },
+                {
+                    "date": 1655774804431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,12 @@\n \n   constructor(a: string) {\n     this.name = a;\n   }\n+\n+  print(a: string) {\n+    console.log(\"실행 되었음\" + a);\n+  }\n }\n \n let person1 = new Person(\"kim\");\n let person2 = new Person(\"Park\");\n"
+                },
+                {
+                    "date": 1655774818189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,4 +23,5 @@\n }\n \n let person1 = new Person(\"kim\");\n let person2 = new Person(\"Park\");\n+person1.print(a);\n"
+                },
+                {
+                    "date": 1655774823392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,5 @@\n }\n \n let person1 = new Person(\"kim\");\n let person2 = new Person(\"Park\");\n-person1.print(a);\n+person1.print(\"a\");\n"
+                },
+                {
+                    "date": 1655775204072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,4 +24,13 @@\n \n let person1 = new Person(\"kim\");\n let person2 = new Person(\"Park\");\n person1.print(\"a\");\n+\n+class Car {\n+  model;\n+  price;\n+\n+  constructor(model, price) {\n+    this.model = model;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1655775213181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,7 @@\n   price;\n \n   constructor(model, price) {\n     this.model = model;\n+    this.price = price;\n   }\n }\n"
+                },
+                {
+                    "date": 1655775225460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n let person2 = new Person(\"Park\");\n person1.print(\"a\");\n \n class Car {\n-  model;\n-  price;\n+  model: string;\n+  price: number;\n \n   constructor(model, price) {\n     this.model = model;\n     this.price = price;\n"
+                },
+                {
+                    "date": 1655775239343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n class Car {\n   model: string;\n   price: number;\n \n-  constructor(model, price) {\n+  constructor(model: string, price: number) {\n     this.model = model;\n     this.price = price;\n   }\n }\n"
+                },
+                {
+                    "date": 1655775281107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,9 @@\n   constructor(model: string, price: number) {\n     this.model = model;\n     this.price = price;\n   }\n+\n+  tax() {\n+    this.price = this.price / 10;\n+  }\n }\n"
+                },
+                {
+                    "date": 1655775298820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,7 @@\n     this.price = price;\n   }\n \n   tax() {\n-    this.price = this.price / 10;\n+    return (this.price = this.price / 10);\n   }\n }\n"
+                },
+                {
+                    "date": 1655775309538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,8 @@\n     this.model = model;\n     this.price = price;\n   }\n \n-  tax() {\n+  tax(): number {\n     return (this.price = this.price / 10);\n   }\n }\n"
+                },
+                {
+                    "date": 1655775328266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,4 +38,6 @@\n   tax(): number {\n     return (this.price = this.price / 10);\n   }\n }\n+\n+let car1 = new Car();\n"
+                },
+                {
+                    "date": 1655775340103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,5 +39,5 @@\n     return (this.price = this.price / 10);\n   }\n }\n \n-let car1 = new Car();\n+let car1 = new Car(\"소나타\", 3000);\n"
+                },
+                {
+                    "date": 1655775347649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,4 +40,6 @@\n   }\n }\n \n let car1 = new Car(\"소나타\", 3000);\n+\n+console.log(car1);\n"
+                },
+                {
+                    "date": 1655775355115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,4 +42,5 @@\n \n let car1 = new Car(\"소나타\", 3000);\n \n console.log(car1);\n+console.log(car1.tax());\n"
+                },
+                {
+                    "date": 1655775390123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     this.price = price;\n   }\n \n   tax(): number {\n-    return (this.price = this.price / 10);\n+    return this.price * 0.1;\n   }\n }\n \n let car1 = new Car(\"소나타\", 3000);\n"
+                },
+                {
+                    "date": 1655775725897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,8 @@\n let car1 = new Car(\"소나타\", 3000);\n \n console.log(car1);\n console.log(car1.tax());\n+\n+class Word {\n+  char: string | number;\n+}\n"
+                },
+                {
+                    "date": 1655775764353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,6 +45,9 @@\n console.log(car1);\n console.log(car1.tax());\n \n class Word {\n-  char: string | number;\n+  num: number;\n+  str: string;\n+\n+  constructor(...char) {}\n }\n"
+                },
+                {
+                    "date": 1655775772100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,6 +48,6 @@\n class Word {\n   num: number;\n   str: string;\n \n-  constructor(...char) {}\n+  constructor(...char: string | number) {}\n }\n"
+                },
+                {
+                    "date": 1655775801750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,6 +48,6 @@\n class Word {\n   num: number;\n   str: string;\n \n-  constructor(...char: string | number) {}\n+  constructor(...char: string | number[]) {}\n }\n"
+                },
+                {
+                    "date": 1655775849725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,6 +48,9 @@\n class Word {\n   num: number;\n   str: string;\n \n-  constructor(...char: string | number[]) {}\n+  constructor(...char: (string | number)[]) {\n+    for (const char of char) {\n+    }\n+  }\n }\n"
+                },
+                {
+                    "date": 1655775863774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,8 @@\n   num: number;\n   str: string;\n \n   constructor(...char: (string | number)[]) {\n-    for (const char of char) {\n+    for (const target of char) {\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1655776442898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,13 +44,10 @@\n \n console.log(car1);\n console.log(car1.tax());\n \n-class Word {\n-  num: number;\n-  str: string;\n-\n-  constructor(...char: (string | number)[]) {\n+class Word {        \\  \n     for (const target of char) {\n+      if(target )\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1655776815927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n \n console.log(car1);\n console.log(car1.tax());\n \n-class Word {        \\  \n+class Word {\n     for (const target of char) {\n       if(target )\n     }\n   }\n"
+                },
+                {
+                    "date": 1655776984826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,15 @@\n console.log(car1);\n console.log(car1.tax());\n \n class Word {\n+  num: number[];\n+  str: string[];\n+\n+  constructor(...char: (string | number)[]) {\n     for (const target of char) {\n-      if(target )\n+      if (target typeof === 'number') {\n+        this.num.push(target)\n+      }\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1655777010214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,10 +50,12 @@\n   str: string[];\n \n   constructor(...char: (string | number)[]) {\n     for (const target of char) {\n-      if (target typeof === 'number') {\n-        this.num.push(target)\n+      if (typeof target === \"number\") {\n+        this.num.push(target);\n+      } else {\n+        this.num.push(target);\n       }\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1655777016806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     for (const target of char) {\n       if (typeof target === \"number\") {\n         this.num.push(target);\n       } else {\n-        this.num.push(target);\n+        this.str.push(target);\n       }\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1655777060813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,4 +58,6 @@\n       }\n     }\n   }\n }\n+\n+let obj = new Word(\"kim\", 1, 2, 3, \"park\");\n"
+                },
+                {
+                    "date": 1655777070495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,4 +60,6 @@\n   }\n }\n \n let obj = new Word(\"kim\", 1, 2, 3, \"park\");\n+\n+console.log(obj);\n"
+                },
+                {
+                    "date": 1655777079279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,5 +61,7 @@\n }\n \n let obj = new Word(\"kim\", 1, 2, 3, \"park\");\n \n+console.log(obj.num);\n+console.log(obj.str);\n console.log(obj);\n"
+                },
+                {
+                    "date": 1655777132280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n   num: number[];\n   str: string[];\n \n   constructor(...char: (string | number)[]) {\n+    console.log(char);\n     for (const target of char) {\n       if (typeof target === \"number\") {\n         this.num.push(target);\n       } else {\n"
+                },
+                {
+                    "date": 1655777140163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,15 +50,15 @@\n   str: string[];\n \n   constructor(...char: (string | number)[]) {\n     console.log(char);\n-    for (const target of char) {\n-      if (typeof target === \"number\") {\n-        this.num.push(target);\n-      } else {\n-        this.str.push(target);\n-      }\n-    }\n+    // for (const target of char) {\n+    //   if (typeof target === \"number\") {\n+    //     this.num.push(target);\n+    //   } else {\n+    //     this.str.push(target);\n+    //   }\n+    // }\n   }\n }\n \n let obj = new Word(\"kim\", 1, 2, 3, \"park\");\n"
+                },
+                {
+                    "date": 1655777235895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,16 +49,15 @@\n   num: number[];\n   str: string[];\n \n   constructor(...char: (string | number)[]) {\n-    console.log(char);\n-    // for (const target of char) {\n-    //   if (typeof target === \"number\") {\n-    //     this.num.push(target);\n-    //   } else {\n-    //     this.str.push(target);\n-    //   }\n-    // }\n+    char.forEach((el) => {\n+      if (typeof el === \"number\") {\n+        this.num.push(el);\n+      } else {\n+        this.str.push(el);\n+      }\n+    });\n   }\n }\n \n let obj = new Word(\"kim\", 1, 2, 3, \"park\");\n"
+                },
+                {
+                    "date": 1655777257772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n \n   constructor(...char: (string | number)[]) {\n     char.forEach((el) => {\n       if (typeof el === \"number\") {\n+        console.log(el);\n         this.num.push(el);\n       } else {\n         this.str.push(el);\n       }\n"
+                },
+                {
+                    "date": 1655777270940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n       if (typeof el === \"number\") {\n         console.log(el);\n         this.num.push(el);\n       } else {\n-        this.str.push(el);\n+        // this.str.push(el);\n       }\n     });\n   }\n }\n"
+                },
+                {
+                    "date": 1655777295345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,18 +45,18 @@\n console.log(car1);\n console.log(car1.tax());\n \n class Word {\n-  num: number[];\n-  str: string[];\n+  num: number[] = [];\n+  str: string[] = [];\n \n   constructor(...char: (string | number)[]) {\n     char.forEach((el) => {\n       if (typeof el === \"number\") {\n         console.log(el);\n         this.num.push(el);\n       } else {\n-        // this.str.push(el);\n+        this.str.push(el);\n       }\n     });\n   }\n }\n"
+                }
+            ],
+            "date": 1655773651521,
+            "name": "Commit-0",
+            "content": "const;\n"
+        }
+    ]
+}
