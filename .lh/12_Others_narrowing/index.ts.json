@@ -1,0 +1,70 @@
+{
+    "sourceFile": "12_Others_narrowing/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1655792288736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655792300799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n type Fish = { swim: string };\n+type Bird = { fly: string };\n"
+                },
+                {
+                    "date": 1655792365997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n type Fish = { swim: string };\n type Bird = { fly: string };\n+\n+const animalFunc = (amimal: Fish | Bird) => {};\n"
+                },
+                {
+                    "date": 1655792511783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,8 @@\n type Fish = { swim: string };\n type Bird = { fly: string };\n \n-const animalFunc = (amimal: Fish | Bird) => {};\n+const animalFunc = (animal: Fish | Bird) => {\n+  if (\"swim\" in animal) {\n+    animal.swim;\n+  }\n+};\n"
+                },
+                {
+                    "date": 1655792588771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n   if (\"swim\" in animal) {\n     animal.swim;\n   }\n };\n+\n+let data = new Date();\n"
+                },
+                {
+                    "date": 1655792606936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,4 @@\n   if (\"swim\" in animal) {\n     animal.swim;\n   }\n };\n-\n-let data = new Date();\n"
+                },
+                {
+                    "date": 1655792640975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n   if (\"swim\" in animal) {\n     animal.swim;\n   }\n };\n+\n+type ObjType = { name: string };\n"
+                },
+                {
+                    "date": 1655792649928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,5 @@\n   }\n };\n \n type ObjType = { name: string };\n+type ArrayType = string[];\n"
+                },
+                {
+                    "date": 1655792683494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,6 @@\n };\n \n type ObjType = { name: string };\n type ArrayType = string[];\n+\n+const check = (target: ObjType | ArrayType) => {};\n"
+                },
+                {
+                    "date": 1655792714742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,11 @@\n \n type ObjType = { name: string };\n type ArrayType = string[];\n \n-const check = (target: ObjType | ArrayType) => {};\n+const check = (target: ObjType | ArrayType) => {\n+  if (target instanceof Array) {\n+    return \"Array\";\n+  } else {\n+    return \"Array\";\n+  }\n+};\n"
+                },
+                {
+                    "date": 1655792735369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,9 @@\n const check = (target: ObjType | ArrayType) => {\n   if (target instanceof Array) {\n     return \"Array\";\n   } else {\n-    return \"Array\";\n+    return \"Object\";\n   }\n };\n+\n+console.log(check({ name: \"kim\" }));\n"
+                },
+                {
+                    "date": 1655792759205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n     return \"Object\";\n   }\n };\n \n-console.log(check({ name: \"kim\" }));\n+console.log(check([\"si\"]));\n"
+                },
+                {
+                    "date": 1655792867024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,4 +18,9 @@\n   }\n };\n \n console.log(check([\"si\"]));\n+\n+type Car = {\n+  wheel: \"4개\";\n+  color: string;\n+};\n"
+                },
+                {
+                    "date": 1655792892704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,13 @@\n };\n \n console.log(check([\"si\"]));\n \n-type Car = {\n+type CarType = {\n   wheel: \"4개\";\n   color: string;\n };\n+\n+type BikeType = {\n+  wheel: \"2개\";\n+  color: string;\n+};\n"
+                }
+            ],
+            "date": 1655792288736,
+            "name": "Commit-0",
+            "content": "type Fish = { swim: string };\n"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "14_Type_import_export/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1655860142556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655860378114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n-import { Name } from \"./Type\";\n+// import { Name } from \"./Type\";\n+///<reference path=\"./Type.ts\" />\n \n let newName: Name = \"민수\";\n"
+                },
+                {
+                    "date": 1655860702955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,10 @@\n-// import { Name } from \"./Type\";\n-///<reference path=\"./Type.ts\" />\n+namespace Animal {\n+  type Dog = string;\n+}\n \n-let newName: Name = \"민수\";\n+interface Dog {\n+  name: string;\n+}\n+\n+let dog1: Dog = \"bark\";\n+let dog2: Dog = { name: \"paw\" };\n"
+                },
+                {
+                    "date": 1655860713251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n interface Dog {\n   name: string;\n }\n \n-let dog1: Dog = \"bark\";\n+let dog1: Animal.Dog = \"bark\";\n let dog2: Dog = { name: \"paw\" };\n"
+                },
+                {
+                    "date": 1655860720849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n namespace Animal {\n-  type Dog = string;\n+  export type Dog = string;\n }\n \n interface Dog {\n   name: string;\n"
+                }
+            ],
+            "date": 1655860142555,
+            "name": "Commit-0",
+            "content": "import { Name } from \"./Type\";\n\nlet newName: Name = \"민수\";\n"
+        }
+    ]
+}

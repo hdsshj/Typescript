@@ -1,0 +1,142 @@
+{
+    "sourceFile": "11_Destructuring_Type/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1655788486616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655788516731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-let {} = { student: true, age: 20 };\n+let { student, stAge } = { student: true, stAge: 20 };\n"
+                },
+                {
+                    "date": 1655788572113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n let { student, stAge } = { student: true, stAge: 20 };\n+\n+const printObj = ({ student, stAge }) => {\n+  console.log(student, stAge);\n+};\n"
+                },
+                {
+                    "date": 1655788589576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,4 +2,6 @@\n \n const printObj = ({ student, stAge }) => {\n   console.log(student, stAge);\n };\n+\n+printObj({ student, stAge });\n"
+                },
+                {
+                    "date": 1655788656364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,11 @@\n let { student, stAge } = { student: true, stAge: 20 };\n \n+interface printOnjType {\n+  student: boolean;\n+  stAge: number;\n+}\n+\n const printObj = ({ student, stAge }) => {\n   console.log(student, stAge);\n };\n \n"
+                },
+                {
+                    "date": 1655788664326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   student: boolean;\n   stAge: number;\n }\n \n-const printObj = ({ student, stAge }) => {\n+const printObj = ({ student, stAge }: printOnjType) => {\n   console.log(student, stAge);\n };\n \n printObj({ student, stAge });\n"
+                },
+                {
+                    "date": 1655789852217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,44 @@\n   console.log(student, stAge);\n };\n \n printObj({ student, stAge });\n+\n+const maxNumber = (...num: number[]) => {\n+  let maxNum = 0;\n+  console.log(num);\n+  num.forEach((el, idx) => {\n+    if (!num[idx + 1]) {\n+      return maxNum;\n+    }\n+\n+    if (el > num[idx + 1]) {\n+      maxNum = el;\n+    } else {\n+      maxNum = num[idx + 1];\n+    }\n+  });\n+};\n+\n+console.log(\n+  maxNumber(\n+    1,\n+    2,\n+    3,\n+    4,\n+    5,\n+    6,\n+    7,\n+    78234,\n+    234,\n+    234,\n+    234,\n+    23,\n+    12123,\n+    12,\n+    123,\n+    123,\n+    14,\n+    12,\n+    4\n+  )\n+);\n"
+                },
+                {
+                    "date": 1655789874842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n const maxNumber = (...num: number[]) => {\n   let maxNum = 0;\n   console.log(num);\n   num.forEach((el, idx) => {\n+    console.log(num[idx + 1]);\n+\n     if (!num[idx + 1]) {\n       return maxNum;\n     }\n \n"
+                },
+                {
+                    "date": 1655789901730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n   num.forEach((el, idx) => {\n     console.log(num[idx + 1]);\n \n     if (!num[idx + 1]) {\n+      console.log(maxNum);\n       return maxNum;\n     }\n \n     if (el > num[idx + 1]) {\n"
+                },
+                {
+                    "date": 1655789911409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   num.forEach((el, idx) => {\n     console.log(num[idx + 1]);\n \n     if (!num[idx + 1]) {\n-      console.log(maxNum);\n+      console.log(\"11111\", maxNum);\n       return maxNum;\n     }\n \n     if (el > num[idx + 1]) {\n"
+                },
+                {
+                    "date": 1655789945205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n     if (!num[idx + 1]) {\n       console.log(\"11111\", maxNum);\n       return maxNum;\n     }\n+    console.log(\"11111\", maxNum);\n \n     if (el > num[idx + 1]) {\n       maxNum = el;\n     } else {\n"
+                },
+                {
+                    "date": 1655789958565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     if (!num[idx + 1]) {\n       console.log(\"11111\", maxNum);\n       return maxNum;\n     }\n-    console.log(\"11111\", maxNum);\n+    console.log(\"el ===>\", el);\n \n     if (el > num[idx + 1]) {\n       maxNum = el;\n     } else {\n"
+                },
+                {
+                    "date": 1655789966237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n       console.log(\"11111\", maxNum);\n       return maxNum;\n     }\n     console.log(\"el ===>\", el);\n+    console.log(\"maxNum ===>\", maxNum);\n \n     if (el > num[idx + 1]) {\n       maxNum = el;\n     } else {\n"
+                },
+                {
+                    "date": 1655789985286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n       console.log(\"11111\", maxNum);\n       return maxNum;\n     }\n     console.log(\"el ===>\", el);\n+    console.log(\"num[idx + 1] ===>\", num[idx + 1]);\n     console.log(\"maxNum ===>\", maxNum);\n \n     if (el > num[idx + 1]) {\n       maxNum = el;\n"
+                },
+                {
+                    "date": 1655790105008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n const maxNumber = (...num: number[]) => {\n   let maxNum = 0;\n   console.log(num);\n-  num.forEach((el, idx) => {\n+  num.forEach((el) => {\n     console.log(num[idx + 1]);\n \n     if (!num[idx + 1]) {\n       console.log(\"11111\", maxNum);\n"
+                },
+                {
+                    "date": 1655790115467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,25 +13,9 @@\n \n const maxNumber = (...num: number[]) => {\n   let maxNum = 0;\n   console.log(num);\n-  num.forEach((el) => {\n-    console.log(num[idx + 1]);\n-\n-    if (!num[idx + 1]) {\n-      console.log(\"11111\", maxNum);\n-      return maxNum;\n-    }\n-    console.log(\"el ===>\", el);\n-    console.log(\"num[idx + 1] ===>\", num[idx + 1]);\n-    console.log(\"maxNum ===>\", maxNum);\n-\n-    if (el > num[idx + 1]) {\n-      maxNum = el;\n-    } else {\n-      maxNum = num[idx + 1];\n-    }\n-  });\n+  num.forEach((el) => {});\n };\n \n console.log(\n   maxNumber(\n"
+                },
+                {
+                    "date": 1655790142665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,13 @@\n \n const maxNumber = (...num: number[]) => {\n   let maxNum = 0;\n   console.log(num);\n-  num.forEach((el) => {});\n+  num.forEach((el) => {\n+    if (maxNum < el) {\n+      maxNum = el;\n+    }\n+  });\n };\n \n console.log(\n   maxNumber(\n"
+                },
+                {
+                    "date": 1655790156437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n     if (maxNum < el) {\n       maxNum = el;\n     }\n   });\n+\n+  return maxNum;\n };\n \n console.log(\n   maxNumber(\n"
+                },
+                {
+                    "date": 1655790166707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n printObj({ student, stAge });\n \n const maxNumber = (...num: number[]) => {\n   let maxNum = 0;\n-  console.log(num);\n   num.forEach((el) => {\n     if (maxNum < el) {\n       maxNum = el;\n     }\n"
+                },
+                {
+                    "date": 1655790172444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     234,\n     234,\n     234,\n     23,\n-    12123,\n+    1212322,\n     12,\n     123,\n     123,\n     14,\n"
+                },
+                {
+                    "date": 1655790448193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,27 +21,5 @@\n \n   return maxNum;\n };\n \n-console.log(\n-  maxNumber(\n-    1,\n-    2,\n-    3,\n-    4,\n-    5,\n-    6,\n-    7,\n-    78234,\n-    234,\n-    234,\n-    234,\n-    23,\n-    1212322,\n-    12,\n-    123,\n-    123,\n-    14,\n-    12,\n-    4\n-  )\n-);\n+console.log(maxNumber(1, 2, 3));\n"
+                },
+                {
+                    "date": 1655790530460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,4 +22,8 @@\n   return maxNum;\n };\n \n console.log(maxNumber(1, 2, 3));\n+\n+const destructureFunc = ({ user, comment, admin }) => {};\n+\n+destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n"
+                },
+                {
+                    "date": 1655790549364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,11 @@\n };\n \n console.log(maxNumber(1, 2, 3));\n \n+interface DestType {\n+  { user, comment, admin }\n+}\n+\n const destructureFunc = ({ user, comment, admin }) => {};\n \n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n"
+                },
+                {
+                    "date": 1655790564146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n \n console.log(maxNumber(1, 2, 3));\n \n interface DestType {\n-  { user, comment, admin }\n+  user: string;\n+  comment: number[];\n+  admin: boolean;\n }\n \n const destructureFunc = ({ user, comment, admin }) => {};\n \n"
+                },
+                {
+                    "date": 1655790624950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,9 @@\n   comment: number[];\n   admin: boolean;\n }\n \n-const destructureFunc = ({ user, comment, admin }) => {};\n+const destructureFunc = ({ user, comment, admin }: DestType) => {\n+  console.log(user, comment.admin);\n+};\n \n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n"
+                },
+                {
+                    "date": 1655790635427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   comment: number[];\n   admin: boolean;\n }\n \n-const destructureFunc = ({ user, comment, admin }: DestType) => {\n-  console.log(user, comment.admin);\n+const destructureFunc = ({ user, comment, admin }: DestType): void => {\n+  console.log(user, comment, admin);\n };\n \n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n"
+                },
+                {
+                    "date": 1655790691968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,4 +34,8 @@\n   console.log(user, comment, admin);\n };\n \n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n+\n+const destArrayFunc = () => {\n+  console.log();\n+};\n"
+                },
+                {
+                    "date": 1655790787617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,9 @@\n };\n \n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n \n-const destArrayFunc = () => {\n+type DestArrType = (number | string | boolean)[];\n+\n+const destArrayFunc = ([a, b, c]) => {\n   console.log();\n };\n"
+                },
+                {
+                    "date": 1655790797513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,7 +37,7 @@\n destructureFunc({ user: \"kim\", comment: [3, 5, 4], admin: false });\n \n type DestArrType = (number | string | boolean)[];\n \n-const destArrayFunc = ([a, b, c]) => {\n-  console.log();\n+const destArrayFunc = ([a, b, c]: DestArrType) => {\n+  console.log(a, b, c);\n };\n"
+                },
+                {
+                    "date": 1655790814581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,4 +40,6 @@\n \n const destArrayFunc = ([a, b, c]: DestArrType) => {\n   console.log(a, b, c);\n };\n+\n+destArrayFunc([40, \"wine\", false]);\n"
+                },
+                {
+                    "date": 1655790826384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,5 @@\n const destArrayFunc = ([a, b, c]: DestArrType) => {\n   console.log(a, b, c);\n };\n \n-destArrayFunc([40, \"wine\", false]);\n+console.log(destArrayFunc([40, \"wine\", false]));\n"
+                },
+                {
+                    "date": 1655790865732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,5 @@\n const destArrayFunc = ([a, b, c]: DestArrType) => {\n   console.log(a, b, c);\n };\n \n-console.log(destArrayFunc([40, \"wine\", false]));\n+destArrayFunc([40, \"wine\", false]);\n"
+                }
+            ],
+            "date": 1655788486616,
+            "name": "Commit-0",
+            "content": "let {} = { student: true, age: 20 };\n"
+        }
+    ]
+}

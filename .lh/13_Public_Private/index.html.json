@@ -1,0 +1,102 @@
+{
+    "sourceFile": "13_Public_Private/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1655797767438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655797782191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n-  <body></body>\n+  <body>\n+    <div></div>\n+  </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797820791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n+  <style></style>\n   <body>\n-    <div></div>\n+    <div>aaa</div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797851827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   </head>\n   <script src=\"index.js\"></script>\n   <style></style>\n   <body>\n-    <div>aaa</div>\n+    <div class=\"wrap\">aaa</div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797858518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   </head>\n   <script src=\"index.js\"></script>\n   <style></style>\n   <body>\n-    <div class=\"wrap\">aaa</div>\n+    <div class=\"containal\">aaa</div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797932905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   </head>\n   <script src=\"index.js\"></script>\n   <style></style>\n   <body>\n-    <div class=\"containal\">aaa</div>\n+    <div class=\"container\">aaa</div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797962210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,15 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n-  <style></style>\n+  <style>\n+    .container {\n+      width: 400px;\n+      height: 400px;\n+      background-color: red;\n+    }\n+  </style>\n   <body>\n     <div class=\"container\">aaa</div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655797979168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   <style>\n     .container {\n       width: 400px;\n       height: 400px;\n-      background-color: red;\n+      background-color: aliceblue;\n     }\n   </style>\n   <body>\n     <div class=\"container\">aaa</div>\n"
+                },
+                {
+                    "date": 1655801946999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n       background-color: aliceblue;\n     }\n   </style>\n   <body>\n-    <div class=\"container\">aaa</div>\n+    <div class=\"container\"></div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802018345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,21 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <script src=\"index.js\"></script>\n+  <script src=\"index.js\">\n+        addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+    addSquare.draw();\n+  </script>\n   <style>\n     .container {\n       width: 400px;\n       height: 400px;\n"
+                },
+                {
+                    "date": 1655802034220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,21 +5,9 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <script src=\"index.js\">\n-        addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-    addSquare.draw();\n-  </script>\n+  <script src=\"index.js\"></script>\n   <style>\n     .container {\n       width: 400px;\n       height: 400px;\n"
+                },
+                {
+                    "date": 1655802192147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,14 @@\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n   <style>\n-    .container {\n+    #container {\n       width: 400px;\n       height: 400px;\n       background-color: aliceblue;\n     }\n   </style>\n   <body>\n-    <div class=\"container\"></div>\n+    <div id=\"container\"></div>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802315593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n-  <style>\n-    #container {\n-      width: 400px;\n-      height: 400px;\n-      background-color: aliceblue;\n-    }\n-  </style>\n-  <body>\n-    <div id=\"container\"></div>\n-  </body>\n+\n+  <body></body>\n </html>\n"
+                },
+                {
+                    "date": 1655802328216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,15 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <script src=\"index.js\"></script>\n-\n-  <body></body>\n+  <style>\n+    #container {\n+      width: 400px;\n+      height: 400px;\n+      background-color: aliceblue;\n+    }\n+  </style>\n+  <body>\n+    <div id=\"container\"></div>\n+  </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802342942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,33 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <script src=\"index.js\"></script>\n+  <script src=\"index.js\">\n+    class Square {\n+      constructor(\n+        public width: number,\n+        public height: number,\n+        public color: string\n+      ) {}\n+      draw() {\n+        let a = Math.random();\n+        let square = `<div style=\"position:relative;\n+          top:${a * 400}px;\n+          left:${a * 400}px;\n+          width:${this.width}px;\n+          height : ${this.height}px;\n+          background:${this.color}\"></div>`;\n+        document.body.insertAdjacentHTML(\"beforeend\", square);\n+      }\n+    }\n+\n+    let 네모 = new Square(30, 30, \"red\");\n+    네모.draw();\n+    네모.draw();\n+    네모.draw();\n+    네모.draw();\n+  </script>\n   <style>\n     #container {\n       width: 400px;\n       height: 400px;\n"
+                },
+                {
+                    "date": 1655802357574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,33 +5,9 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <script src=\"index.js\">\n-    class Square {\n-      constructor(\n-        public width: number,\n-        public height: number,\n-        public color: string\n-      ) {}\n-      draw() {\n-        let a = Math.random();\n-        let square = `<div style=\"position:relative;\n-          top:${a * 400}px;\n-          left:${a * 400}px;\n-          width:${this.width}px;\n-          height : ${this.height}px;\n-          background:${this.color}\"></div>`;\n-        document.body.insertAdjacentHTML(\"beforeend\", square);\n-      }\n-    }\n-\n-    let 네모 = new Square(30, 30, \"red\");\n-    네모.draw();\n-    네모.draw();\n-    네모.draw();\n-    네모.draw();\n-  </script>\n+  <script src=\"index.js\"></script>\n   <style>\n     #container {\n       width: 400px;\n       height: 400px;\n"
+                },
+                {
+                    "date": 1655802747890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <script src=\"index.js\"></script>\n   <style>\n     #container {\n       width: 400px;\n       height: 400px;\n@@ -15,6 +14,7 @@\n     }\n   </style>\n   <body>\n     <div id=\"container\"></div>\n+    <script src=\"index.js\"></script>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802848458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,7 @@\n       background-color: aliceblue;\n     }\n   </style>\n   <body>\n-    <div id=\"container\"></div>\n     <script src=\"index.js\"></script>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802856666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,9 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-  <style>\n-    #container {\n-      width: 400px;\n-      height: 400px;\n-      background-color: aliceblue;\n-    }\n-  </style>\n+\n   <body>\n     <script src=\"index.js\"></script>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802909138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,15 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n-\n+  <style>\n+    #container {\n+      width: 400px;\n+      height: 400px;\n+      background-color: aliceblue;\n+    }\n+  </style>\n   <body>\n     <script src=\"index.js\"></script>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1655802932845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>Document</title>\n   </head>\n   <style>\n-    #container {\n-      width: 400px;\n-      height: 400px;\n+    body {\n+      width: 100%;\n+      height: 100%;\n       background-color: aliceblue;\n     }\n   </style>\n   <body>\n"
+                },
+                {
+                    "date": 1655802990818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n     <title>Document</title>\n   </head>\n   <style>\n     body {\n-      width: 100%;\n-      height: 100%;\n+      width: 400px;\n+      height: 400px;\n       background-color: aliceblue;\n     }\n   </style>\n   <body>\n"
+                }
+            ],
+            "date": 1655797767438,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Document</title>\n  </head>\n  <script src=\"index.js\"></script>\n  <body></body>\n</html>\n"
+        }
+    ]
+}

@@ -1,0 +1,338 @@
+{
+    "sourceFile": "13_Public_Private/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 80,
+            "patches": [
+                {
+                    "date": 1655795637156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655795870962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n class User {\n-  name;\n-  constructor() {\n-    this.name = \"kim\";\n+  name: string;\n+  familyName: string;\n+  constructor(a) {\n+    this.name = a;\n   }\n }\n"
+                },
+                {
+                    "date": 1655795893596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n class User {\n   name: string;\n-  familyName: string;\n+  familyName: string = \"kim\";\n   constructor(a) {\n     this.name = a;\n   }\n }\n+\n+let user1 = new User(\"민수\");\n"
+                },
+                {
+                    "date": 1655795901061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,5 @@\n   }\n }\n \n let user1 = new User(\"민수\");\n+console.log(user1);\n"
+                },
+                {
+                    "date": 1655795947051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n class User {\n   name: string;\n   familyName: string = \"kim\";\n   constructor(a) {\n-    this.name = a;\n+    this.name = a + this.familyName;\n   }\n }\n \n let user1 = new User(\"민수\");\n"
+                },
+                {
+                    "date": 1655795995631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class User {\n   name: string;\n-  familyName: string = \"kim\";\n+  private familyName: string = \"kim\";\n   constructor(a) {\n     this.name = a + this.familyName;\n   }\n }\n"
+                },
+                {
+                    "date": 1655796729390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,6 @@\n class User {\n-  name: string;\n-  private familyName: string = \"kim\";\n-  constructor(a) {\n-    this.name = a + this.familyName;\n-  }\n+  x: 10;\n }\n \n let user1 = new User(\"민수\");\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655796738760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n class User {\n   x: 10;\n+  y: 20;\n }\n \n-let user1 = new User(\"민수\");\n+let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655796769516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n   y: 20;\n }\n \n let user1 = new User();\n-console.log(user1);\n+console.log(user1.x);\n"
+                },
+                {
+                    "date": 1655796782971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n   y: 20;\n }\n \n let user1 = new User();\n-console.log(user1.x);\n+console.log(user1);\n"
+                },
+                {
+                    "date": 1655796807168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n class User {\n-  x: 10;\n-  y: 20;\n+  x: number;\n+  y: number;\n+\n+  constructor() {}\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655796814971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n class User {\n   x: number;\n   y: number;\n \n-  constructor() {}\n+  constructor() {\n+    x: 10;\n+    y: 20;\n+  }\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655796835123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n   x: number;\n   y: number;\n \n   constructor() {\n-    x: 10;\n-    y: 20;\n+    this.x = 10;\n+    this.y = 20;\n   }\n }\n \n let user1 = new User();\n"
+                },
+                {
+                    "date": 1655796849288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  x: number;\n+  static x: number;\n   y: number;\n \n   constructor() {\n     this.x = 10;\n"
+                },
+                {
+                    "date": 1655796861674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  static x: number;\n+  static x: number = 10;\n   y: number;\n \n   constructor() {\n     this.x = 10;\n"
+                },
+                {
+                    "date": 1655796876886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,10 @@\n   static x: number = 10;\n   y: number;\n \n   constructor() {\n-    this.x = 10;\n     this.y = 20;\n   }\n }\n \n let user1 = new User();\n-console.log(user1);\n+console.log(User.x);\n"
+                },
+                {
+                    "date": 1655796885022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n   }\n }\n \n let user1 = new User();\n-console.log(User.x);\n+console.log(User.y);\n"
+                },
+                {
+                    "date": 1655796893382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n   }\n }\n \n let user1 = new User();\n-console.log(User.y);\n+console.log(User.x);\n"
+                },
+                {
+                    "date": 1655796902827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  static x: number = 10;\n+  x: number = 10;\n   y: number;\n \n   constructor() {\n     this.y = 20;\n"
+                },
+                {
+                    "date": 1655796964015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  x: number = 10;\n+  public static x: number = 10;\n   y: number;\n \n   constructor() {\n     this.y = 20;\n"
+                },
+                {
+                    "date": 1655796973995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n   }\n }\n \n let user1 = new User();\n-console.log(User.x);\n+console.log(user1);\n"
+                },
+                {
+                    "date": 1655796985991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n   public static x: number = 10;\n   y: number;\n \n   constructor() {\n+    this.x = 10;\n     this.y = 20;\n   }\n }\n \n"
+                },
+                {
+                    "date": 1655796994935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n   public static x: number = 10;\n   y: number;\n \n   constructor() {\n-    this.x = 10;\n     this.y = 20;\n   }\n }\n \n"
+                },
+                {
+                    "date": 1655797051277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,6 @@\n class User {\n-  public static x: number = 10;\n-  y: number;\n-\n-  constructor() {\n-    this.y = 20;\n-  }\n+  intro = \"전문가 입니다.\";\n }\n \n let user1 = new User();\n-console.log(user1);\n+console.log(user1.x);\n"
+                },
+                {
+                    "date": 1655797057819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n   intro = \"전문가 입니다.\";\n }\n \n let user1 = new User();\n-console.log(user1.x);\n+console.log(user1);\n"
+                },
+                {
+                    "date": 1655797073352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  intro = \"전문가 입니다.\";\n+  intro = \"js 전문가 입니다.\";\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655797116281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n class User {\n+  skill = \"js\";\n   intro = \"js 전문가 입니다.\";\n }\n \n let user1 = new User();\n"
+                },
+                {
+                    "date": 1655797136269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class User {\n   skill = \"js\";\n-  intro = \"js 전문가 입니다.\";\n+  intro = `${this.skill}전문가 입니다.`;\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655797149698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n class User {\n-  skill = \"js\";\n+  static skill = \"js\";\n   intro = `${this.skill}전문가 입니다.`;\n }\n \n let user1 = new User();\n"
+                },
+                {
+                    "date": 1655797155871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class User {\n   static skill = \"js\";\n-  intro = `${this.skill}전문가 입니다.`;\n+  intro = `${skill}전문가 입니다.`;\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655797190735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class User {\n   static skill = \"js\";\n-  intro = `${skill}전문가 입니다.`;\n+  intro = `${User.skill}전문가 입니다.`;\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655797442981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class User {\n-  static skill = \"js\";\n-  intro = `${User.skill}전문가 입니다.`;\n+  private static x = 10;\n+  public static y = 20;\n }\n \n let user1 = new User();\n console.log(user1);\n"
+                },
+                {
+                    "date": 1655797476610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n class User {\n   private static x = 10;\n   public static y = 20;\n+\n+  addOne(a: number) {}\n }\n-\n-let user1 = new User();\n-console.log(user1);\n"
+                },
+                {
+                    "date": 1655797499750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n class User {\n   private static x = 10;\n   public static y = 20;\n \n-  addOne(a: number) {}\n+  addOne(a: number) {\n+    User.x + a;\n+  }\n }\n"
+                },
+                {
+                    "date": 1655797510213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n   private static x = 10;\n   public static y = 20;\n \n   addOne(a: number) {\n-    User.x + a;\n+    User.x += a;\n   }\n }\n"
+                },
+                {
+                    "date": 1655797531448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,9 @@\n \n   addOne(a: number) {\n     User.x += a;\n   }\n+\n+  printX() {\n+    console.log(User.x);\n+  }\n }\n"
+                },
+                {
+                    "date": 1655797569491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,17 @@\n class User {\n   private static x = 10;\n   public static y = 20;\n \n+  constructor() {}\n+\n   addOne(a: number) {\n     User.x += a;\n   }\n \n   printX() {\n     console.log(User.x);\n   }\n }\n+User.addOne(3); //이렇게 하면 x가 3 더해져야함\n+User.addOne(4); //이렇게 하면 x가 4 더해져야함\n+User.printX();\n"
+                },
+                {
+                    "date": 1655797598330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,14 @@\n class User {\n   private static x = 10;\n   public static y = 20;\n \n-  constructor() {}\n-\n-  addOne(a: number) {\n+  public addOne(a: number) {\n     User.x += a;\n   }\n \n   printX() {\n     console.log(User.x);\n   }\n }\n-User.addOne(3); //이렇게 하면 x가 3 더해져야함\n-User.addOne(4); //이렇게 하면 x가 4 더해져야함\n-User.printX();\n+\n+User.\n"
+                },
+                {
+                    "date": 1655797637904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n class User {\n   private static x = 10;\n   public static y = 20;\n \n-  public addOne(a: number) {\n+  static addOne(a: number) {\n     User.x += a;\n   }\n \n-  printX() {\n+  static printX() {\n     console.log(User.x);\n   }\n }\n \n-User.\n+User.addOne();\n"
+                },
+                {
+                    "date": 1655797656498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,7 @@\n     console.log(User.x);\n   }\n }\n \n-User.addOne();\n+User.addOne(32); //이렇게 하면 x가 3 더해져야함\n+User.addOne(4); //이렇게 하면 x가 4 더해져야함\n+User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n"
+                },
+                {
+                    "date": 1655801337834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,9 @@\n \n User.addOne(32); //이렇게 하면 x가 3 더해져야함\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n+\n+class Square {\n+  width: number;\n+  height: number;\n+}\n"
+                },
+                {
+                    "date": 1655801345921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,6 @@\n \n class Square {\n   width: number;\n   height: number;\n+  color: string;\n }\n"
+                },
+                {
+                    "date": 1655801364550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,7 @@\n class Square {\n   width: number;\n   height: number;\n   color: string;\n+\n+  constructor(w, h, c) {}\n }\n"
+                },
+                {
+                    "date": 1655801390384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w, h, c) {}\n+  constructor(w: number, h: number, c: string) {}\n }\n"
+                },
+                {
+                    "date": 1655801447832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,13 @@\n \n User.addOne(32); //이렇게 하면 x가 3 더해져야함\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n+type SquareType = (w: number, h: number, c: string) => void;\n \n class Square {\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w: number, h: number, c: string) {}\n+  constructor(w, h, c) {}\n }\n"
+                },
+                {
+                    "date": 1655801457673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w, h, c) {}\n+  constructor:SquareType(w, h, c) {}\n }\n"
+                },
+                {
+                    "date": 1655801469376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor:SquareType(w, h, c) {}\n+  constructor(w, h, c: SquareType) {}\n }\n"
+                },
+                {
+                    "date": 1655801474513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w, h, c: SquareType) {}\n+  constructor(w, h, c)SquareType {}\n }\n"
+                },
+                {
+                    "date": 1655801483481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w, h, c)SquareType {}\n+  constructor: SquareType(w, h, c) {}\n }\n"
+                },
+                {
+                    "date": 1655801505525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,12 @@\n \n User.addOne(32); //이렇게 하면 x가 3 더해져야함\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n-type SquareType = (w: number, h: number, c: string) => void;\n \n class Square {\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor: SquareType(w, h, c) {}\n+  constructor(w: number, h: number, c: string) {}\n }\n"
+                },
+                {
+                    "date": 1655801544571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,10 @@\n   width: number;\n   height: number;\n   color: string;\n \n-  constructor(w: number, h: number, c: string) {}\n+  constructor(w: number, h: number, c: string) {\n+    this.width = w;\n+    this.height = h;\n+    this.color = c;\n+  }\n }\n"
+                },
+                {
+                    "date": 1655801611963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,9 @@\n     this.width = w;\n     this.height = h;\n     this.color = c;\n   }\n+\n+  draw() {\n+    let randomWidth = Math.floor(Math.random() * 400);\n+  }\n }\n"
+                },
+                {
+                    "date": 1655801622916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,7 @@\n   }\n \n   draw() {\n     let randomWidth = Math.floor(Math.random() * 400);\n+    let randomHeight = Math.floor(Math.random() * 400);\n   }\n }\n"
+                },
+                {
+                    "date": 1655801745849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,10 @@\n \n   draw() {\n     let randomWidth = Math.floor(Math.random() * 400);\n     let randomHeight = Math.floor(Math.random() * 400);\n+\n+    let style = `<div style=\"positon:absolute; width:${this.width}; height:${this.height} \">\n+\n+    </div>`;\n   }\n }\n"
+                },
+                {
+                    "date": 1655801819472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,18 @@\n     this.color = c;\n   }\n \n   draw() {\n-    let randomWidth = Math.floor(Math.random() * 400);\n-    let randomHeight = Math.floor(Math.random() * 400);\n+    let randomLeft = Math.floor(Math.random() * 400);\n+    let randomTop = Math.floor(Math.random() * 400);\n \n-    let style = `<div style=\"positon:absolute; width:${this.width}; height:${this.height} \">\n+    let style = `<div style=\"\n+    positon:absolute;\n+    width:${this.width}px; \n+    height:${this.height}px;\n+    top:${randomTop}px;\n+    left:${randomLeft}px;\n+     \">\n \n     </div>`;\n   }\n }\n"
+                },
+                {
+                    "date": 1655801826689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n-     \">\n+    \">\n \n     </div>`;\n   }\n }\n"
+                },
+                {
+                    "date": 1655801872759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n     \">\n+    </div>`;\n \n-    </div>`;\n+    document.body.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n"
+                },
+                {
+                    "date": 1655801913246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,4 +41,6 @@\n \n     document.body.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n+\n+let addSquare = new Square(30, 30, \"blue\");\n"
+                },
+                {
+                    "date": 1655801921823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,16 @@\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n+\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n"
+                },
+                {
+                    "date": 1655801982316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     let randomLeft = Math.floor(Math.random() * 400);\n     let randomTop = Math.floor(Math.random() * 400);\n \n     let style = `<div style=\"\n-    positon:absolute;\n+    positon:relative;\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n"
+                },
+                {
+                    "date": 1655802010103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,16 +43,4 @@\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n-\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n"
+                },
+                {
+                    "date": 1655802084053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n+    background:${this.color}px;\n     \">\n     </div>`;\n \n     document.body.insertAdjacentHTML(\"beforeend\", style);\n"
+                },
+                {
+                    "date": 1655802097073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,4 +44,16 @@\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n+\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n"
+                },
+                {
+                    "date": 1655802146773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,10 @@\n     background:${this.color}px;\n     \">\n     </div>`;\n \n+    let target = document.getElementsByClassName(\"containor\");\n+\n     document.body.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n"
+                },
+                {
+                    "date": 1655802157025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     </div>`;\n \n     let target = document.getElementsByClassName(\"containor\");\n \n-    document.body.insertAdjacentHTML(\"beforeend\", style);\n+    target.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n"
+                },
+                {
+                    "date": 1655802176630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,11 +39,11 @@\n     background:${this.color}px;\n     \">\n     </div>`;\n \n-    let target = document.getElementsByClassName(\"containor\");\n+    let target = document.getElementsByClassName(\".containor\");\n \n-    target.insertAdjacentHTML(\"beforeend\", style);\n+    target.in(\"beforeend\", style);\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n"
+                },
+                {
+                    "date": 1655802200060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     background:${this.color}px;\n     \">\n     </div>`;\n \n-    let target = document.getElementsByClassName(\".containor\");\n+    let target = document.getElementById(\"containor\");\n \n     target.in(\"beforeend\", style);\n   }\n }\n"
+                },
+                {
+                    "date": 1655802214719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     background:${this.color}px;\n     \">\n     </div>`;\n \n-    let target = document.getElementById(\"containor\");\n+    let target = document.getElementById(\"container\");\n \n     target.in(\"beforeend\", style);\n   }\n }\n"
+                },
+                {
+                    "date": 1655802232877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     </div>`;\n \n     let target = document.getElementById(\"container\");\n \n-    target.in(\"beforeend\", style);\n+    target?.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n"
+                },
+                {
+                    "date": 1655802290791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,47 +15,26 @@\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n \n class Square {\n-  width: number;\n-  height: number;\n-  color: string;\n-\n-  constructor(w: number, h: number, c: string) {\n-    this.width = w;\n-    this.height = h;\n-    this.color = c;\n-  }\n-\n+  constructor(\n+    public width: number,\n+    public height: number,\n+    public color: string\n+  ) {}\n   draw() {\n-    let randomLeft = Math.floor(Math.random() * 400);\n-    let randomTop = Math.floor(Math.random() * 400);\n-\n-    let style = `<div style=\"\n-    positon:relative;\n-    width:${this.width}px; \n-    height:${this.height}px;\n-    top:${randomTop}px;\n-    left:${randomLeft}px;\n-    background:${this.color}px;\n-    \">\n-    </div>`;\n-\n-    let target = document.getElementById(\"container\");\n-\n-    target?.insertAdjacentHTML(\"beforeend\", style);\n+    let a = Math.random();\n+    let square = `<div style=\"position:relative; \n+      top:${a * 400}px; \n+      left:${a * 400}px; \n+      width:${this.width}px; \n+      height : ${this.height}px; \n+      background:${this.color}\"></div>`;\n+    document.body.insertAdjacentHTML(\"beforeend\", square);\n   }\n }\n \n-let addSquare = new Square(30, 30, \"blue\");\n-\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n-addSquare.draw();\n+let 네모 = new Square(30, 30, \"red\");\n+네모.draw();\n+네모.draw();\n+네모.draw();\n+네모.draw();\n"
+                },
+                {
+                    "date": 1655802339234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,28 +13,4 @@\n \n User.addOne(32); //이렇게 하면 x가 3 더해져야함\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n-\n-class Square {\n-  constructor(\n-    public width: number,\n-    public height: number,\n-    public color: string\n-  ) {}\n-  draw() {\n-    let a = Math.random();\n-    let square = `<div style=\"position:relative; \n-      top:${a * 400}px; \n-      left:${a * 400}px; \n-      width:${this.width}px; \n-      height : ${this.height}px; \n-      background:${this.color}\"></div>`;\n-    document.body.insertAdjacentHTML(\"beforeend\", square);\n-  }\n-}\n-\n-let 네모 = new Square(30, 30, \"red\");\n-네모.draw();\n-네모.draw();\n-네모.draw();\n-네모.draw();\n"
+                },
+                {
+                    "date": 1655802361914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,28 @@\n \n User.addOne(32); //이렇게 하면 x가 3 더해져야함\n User.addOne(4); //이렇게 하면 x가 4 더해져야함\n User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n+\n+class Square {\n+  constructor(\n+    public width: number,\n+    public height: number,\n+    public color: string\n+  ) {}\n+  draw() {\n+    let a = Math.random();\n+    let square = `<div style=\"position:relative; \n+      top:${a * 400}px; \n+      left:${a * 400}px; \n+      width:${this.width}px; \n+      height : ${this.height}px; \n+      background:${this.color}\"></div>`;\n+    document.body.insertAdjacentHTML(\"beforeend\", square);\n+  }\n+}\n+\n+let 네모 = new Square(30, 30, \"red\");\n+네모.draw();\n+네모.draw();\n+네모.draw();\n+네모.draw();\n"
+                },
+                {
+                    "date": 1655802451619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,4 @@\n-class User {\n-  private static x = 10;\n-  public static y = 20;\n-\n-  static addOne(a: number) {\n-    User.x += a;\n-  }\n-\n-  static printX() {\n-    console.log(User.x);\n-  }\n-}\n-\n-User.addOne(32); //이렇게 하면 x가 3 더해져야함\n-User.addOne(4); //이렇게 하면 x가 4 더해져야함\n-User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n-\n class Square {\n   constructor(\n     public width: number,\n     public height: number,\n"
+                },
+                {
+                    "date": 1655802520005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,61 @@\n+class User {\n+  private static x = 10;\n+  public static y = 20;\n+\n+  static addOne(a: number) {\n+    User.x += a;\n+  }\n+\n+  static printX() {\n+    console.log(User.x);\n+  }\n+}\n+\n+User.addOne(32); //이렇게 하면 x가 3 더해져야함\n+User.addOne(4); //이렇게 하면 x가 4 더해져야함\n+User.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함\n+\n class Square {\n-  constructor(\n-    public width: number,\n-    public height: number,\n-    public color: string\n-  ) {}\n+  width: number;\n+  height: number;\n+  color: string;\n+\n+  constructor(w: number, h: number, c: string) {\n+    this.width = w;\n+    this.height = h;\n+    this.color = c;\n+  }\n+\n   draw() {\n-    let a = Math.random();\n-    let square = `<div style=\"position:relative; \n-      top:${a * 400}px; \n-      left:${a * 400}px; \n-      width:${this.width}px; \n-      height : ${this.height}px; \n-      background:${this.color}\"></div>`;\n-    document.body.insertAdjacentHTML(\"beforeend\", square);\n+    let randomLeft = Math.floor(Math.random() * 400);\n+    let randomTop = Math.floor(Math.random() * 400);\n+\n+    let style = `<div style=\"\n+    positon:relative;\n+    width:${this.width}px; \n+    height:${this.height}px;\n+    top:${randomTop}px;\n+    left:${randomLeft}px;\n+    background:${this.color}px;\n+    \">\n+    </div>`;\n+\n+    let target = document.getElementById(\"container\");\n+\n+    target?.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n-let 네모 = new Square(30, 30, \"red\");\n-네모.draw();\n-네모.draw();\n-네모.draw();\n-네모.draw();\n+let addSquare = new Square(30, 30, \"blue\");\n+\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n+addSquare.draw();\n"
+                },
+                {
+                    "date": 1655802596855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n-    background:${this.color}px;\n+    background:${this.color};\n     \">\n     </div>`;\n \n     let target = document.getElementById(\"container\");\n"
+                },
+                {
+                    "date": 1655802628842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,10 @@\n     background:${this.color};\n     \">\n     </div>`;\n \n+    console.log(style);\n+\n     let target = document.getElementById(\"container\");\n \n     target?.insertAdjacentHTML(\"beforeend\", style);\n   }\n"
+                },
+                {
+                    "date": 1655802642630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,8 @@\n     background:${this.color};\n     \">\n     </div>`;\n \n-    console.log(style);\n-\n     let target = document.getElementById(\"container\");\n \n     target?.insertAdjacentHTML(\"beforeend\", style);\n   }\n"
+                },
+                {
+                    "date": 1655802863961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,8 @@\n     background:${this.color};\n     \">\n     </div>`;\n \n-    let target = document.getElementById(\"container\");\n-\n     target?.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n"
+                },
+                {
+                    "date": 1655802872889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     background:${this.color};\n     \">\n     </div>`;\n \n-    target?.insertAdjacentHTML(\"beforeend\", style);\n+    document.body.insertAdjacentHTML(\"beforeend\", style);\n   }\n }\n \n let addSquare = new Square(30, 30, \"blue\");\n"
+                },
+                {
+                    "date": 1655802965313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     let randomLeft = Math.floor(Math.random() * 400);\n     let randomTop = Math.floor(Math.random() * 400);\n \n     let style = `<div style=\"\n-    positon:relative;\n+    position:relative;\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n"
+                },
+                {
+                    "date": 1655803023354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     let randomLeft = Math.floor(Math.random() * 400);\n     let randomTop = Math.floor(Math.random() * 400);\n \n     let style = `<div style=\"\n-    position:relative;\n+    position:absolute;\n     width:${this.width}px; \n     height:${this.height}px;\n     top:${randomTop}px;\n     left:${randomLeft}px;\n"
+                }
+            ],
+            "date": 1655795637156,
+            "name": "Commit-0",
+            "content": "class User {\n  name;\n  constructor() {\n    this.name = \"kim\";\n  }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "13_Never/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1655795292689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1655795317540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-const neverFunc = (): never => {};\n+const neverFunc = (): never => {\n+  while (true) {}\n+};\n"
+                }
+            ],
+            "date": 1655795292689,
+            "name": "Commit-0",
+            "content": "const neverFunc = (): never => {};\n"
+        }
+    ]
+}
